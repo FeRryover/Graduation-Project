@@ -1,0 +1,1169 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "coordinate_mode": "geo",
+    "source_files": {
+      "nodes": "result\\simple_network\\road_network_p445m_20260401_170216_6d3\\nodes_p445m_20260401_170216_6d3.csv",
+      "links": "result\\simple_network\\road_network_p445m_20260401_170216_6d3\\edges_p445m_20260401_170216_6d3.csv"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_0_0",
+        "Latitude": "39.117",
+        "Longitude": "161.561",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.561,
+          39.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_0_1",
+        "Latitude": "39.117",
+        "Longitude": "161.565",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.565,
+          39.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_0_2",
+        "Latitude": "39.117",
+        "Longitude": "161.569",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.569,
+          39.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_0_3",
+        "Latitude": "39.117",
+        "Longitude": "161.573",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.573,
+          39.117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_1_0",
+        "Latitude": "39.121",
+        "Longitude": "161.561",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.561,
+          39.121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_1_1",
+        "Latitude": "39.121",
+        "Longitude": "161.565",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.565,
+          39.121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_1_2",
+        "Latitude": "39.121",
+        "Longitude": "161.569",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.569,
+          39.121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_1_3",
+        "Latitude": "39.121",
+        "Longitude": "161.573",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.573,
+          39.121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_2_0",
+        "Latitude": "39.125",
+        "Longitude": "161.561",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.561,
+          39.125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_2_1",
+        "Latitude": "39.125",
+        "Longitude": "161.565",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.565,
+          39.125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_2_2",
+        "Latitude": "39.125",
+        "Longitude": "161.569",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.569,
+          39.125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_2_3",
+        "Latitude": "39.125",
+        "Longitude": "161.573",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.573,
+          39.125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_3_0",
+        "Latitude": "39.129",
+        "Longitude": "161.561",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.561,
+          39.129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_3_1",
+        "Latitude": "39.129",
+        "Longitude": "161.565",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.565,
+          39.129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_3_2",
+        "Latitude": "39.129",
+        "Longitude": "161.569",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.569,
+          39.129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_3_3",
+        "Latitude": "39.129",
+        "Longitude": "161.573",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.573,
+          39.129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_4_0",
+        "Latitude": "39.133",
+        "Longitude": "161.561",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.561,
+          39.133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_4_1",
+        "Latitude": "39.133",
+        "Longitude": "161.565",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.565,
+          39.133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_4_2",
+        "Latitude": "39.133",
+        "Longitude": "161.569",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.569,
+          39.133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "Node_4_3",
+        "Latitude": "39.133",
+        "Longitude": "161.573",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          161.573,
+          39.133
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_0",
+        "To_Node": "Node_0_1",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.117",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.561}, {'lat': 39.117, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.117
+          ],
+          [
+            161.565,
+            39.117
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_1",
+        "To_Node": "Node_0_2",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.117",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.565}, {'lat': 39.117, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.117
+          ],
+          [
+            161.569,
+            39.117
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_2",
+        "To_Node": "Node_0_3",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.117",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.569}, {'lat': 39.117, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.117
+          ],
+          [
+            161.573,
+            39.117
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_0",
+        "To_Node": "Node_1_0",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.561",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.561}, {'lat': 39.121, 'lon': 161.561}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.117
+          ],
+          [
+            161.561,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_0",
+        "To_Node": "Node_1_1",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.561}, {'lat': 39.121, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.121
+          ],
+          [
+            161.565,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_1",
+        "To_Node": "Node_1_1",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.565}, {'lat': 39.121, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.117
+          ],
+          [
+            161.565,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_1",
+        "To_Node": "Node_1_2",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.565}, {'lat': 39.121, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.121
+          ],
+          [
+            161.569,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_2",
+        "To_Node": "Node_1_2",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.569}, {'lat': 39.121, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.117
+          ],
+          [
+            161.569,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_2",
+        "To_Node": "Node_1_3",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.569}, {'lat': 39.121, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.121
+          ],
+          [
+            161.573,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_0_3",
+        "To_Node": "Node_1_3",
+        "From_Latitude": "39.117",
+        "From_Longitude": "161.573",
+        "To_Latitude": "39.121",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.117, 'lon': 161.573}, {'lat': 39.121, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.573,
+            39.117
+          ],
+          [
+            161.573,
+            39.121
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_0",
+        "To_Node": "Node_2_0",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.561",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.561}, {'lat': 39.125, 'lon': 161.561}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.121
+          ],
+          [
+            161.561,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_0",
+        "To_Node": "Node_2_1",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.561}, {'lat': 39.125, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.125
+          ],
+          [
+            161.565,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_1",
+        "To_Node": "Node_2_1",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.565}, {'lat': 39.125, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.121
+          ],
+          [
+            161.565,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_1",
+        "To_Node": "Node_2_2",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.565}, {'lat': 39.125, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.125
+          ],
+          [
+            161.569,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_2",
+        "To_Node": "Node_2_2",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.569}, {'lat': 39.125, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.121
+          ],
+          [
+            161.569,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_2",
+        "To_Node": "Node_2_3",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.569}, {'lat': 39.125, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.125
+          ],
+          [
+            161.573,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_1_3",
+        "To_Node": "Node_2_3",
+        "From_Latitude": "39.121",
+        "From_Longitude": "161.573",
+        "To_Latitude": "39.125",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.121, 'lon': 161.573}, {'lat': 39.125, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.573,
+            39.121
+          ],
+          [
+            161.573,
+            39.125
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_0",
+        "To_Node": "Node_3_0",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.561",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.561}, {'lat': 39.129, 'lon': 161.561}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.125
+          ],
+          [
+            161.561,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_0",
+        "To_Node": "Node_3_1",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.561}, {'lat': 39.129, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.129
+          ],
+          [
+            161.565,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_1",
+        "To_Node": "Node_3_1",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.565}, {'lat': 39.129, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.125
+          ],
+          [
+            161.565,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_1",
+        "To_Node": "Node_3_2",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.565}, {'lat': 39.129, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.129
+          ],
+          [
+            161.569,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_2",
+        "To_Node": "Node_3_2",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.569}, {'lat': 39.129, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.125
+          ],
+          [
+            161.569,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_2",
+        "To_Node": "Node_3_3",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.569}, {'lat': 39.129, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.129
+          ],
+          [
+            161.573,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_2_3",
+        "To_Node": "Node_3_3",
+        "From_Latitude": "39.125",
+        "From_Longitude": "161.573",
+        "To_Latitude": "39.129",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.125, 'lon': 161.573}, {'lat': 39.129, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.573,
+            39.125
+          ],
+          [
+            161.573,
+            39.129
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_0",
+        "To_Node": "Node_4_0",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.561",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.561}, {'lat': 39.133, 'lon': 161.561}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.129
+          ],
+          [
+            161.561,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_4_0",
+        "To_Node": "Node_4_1",
+        "From_Latitude": "39.133",
+        "From_Longitude": "161.561",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.133, 'lon': 161.561}, {'lat': 39.133, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.561,
+            39.133
+          ],
+          [
+            161.565,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_1",
+        "To_Node": "Node_4_1",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.565",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.565}, {'lat': 39.133, 'lon': 161.565}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.129
+          ],
+          [
+            161.565,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_4_1",
+        "To_Node": "Node_4_2",
+        "From_Latitude": "39.133",
+        "From_Longitude": "161.565",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.133, 'lon': 161.565}, {'lat': 39.133, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.565,
+            39.133
+          ],
+          [
+            161.569,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_2",
+        "To_Node": "Node_4_2",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.569",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.569}, {'lat': 39.133, 'lon': 161.569}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.129
+          ],
+          [
+            161.569,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_4_2",
+        "To_Node": "Node_4_3",
+        "From_Latitude": "39.133",
+        "From_Longitude": "161.569",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.133, 'lon': 161.569}, {'lat': 39.133, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.569,
+            39.133
+          ],
+          [
+            161.573,
+            39.133
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "Node_3_3",
+        "To_Node": "Node_4_3",
+        "From_Latitude": "39.129",
+        "From_Longitude": "161.573",
+        "To_Latitude": "39.133",
+        "To_Longitude": "161.573",
+        "num_lanes": "2",
+        "geometry": "[{'lat': 39.129, 'lon': 161.573}, {'lat': 39.133, 'lon': 161.573}]",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            161.573,
+            39.129
+          ],
+          [
+            161.573,
+            39.133
+          ]
+        ]
+      }
+    }
+  ]
+}

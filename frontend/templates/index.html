@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MixSimGPT 交互前端</title>
+  <link rel="stylesheet" href="/static/vendor/leaflet.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+  <div class="bg-shape bg-shape-a"></div>
+  <div class="bg-shape bg-shape-b"></div>
+
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">RoadWeaver AI</p>
+      <h1>多模态路网生成智能体</h1>
+      <p class="sub">基于文本/图像的路网生成工具</p>
+    </header>
+
+    <section class="chat-panel">
+      <div class="chat-head">
+        <h2>AI 对话入口</h2>
+        <div class="chat-head-right">
+          <p>支持自然语言与图片上传，自动分配任务。</p>
+          <button id="toolsToggleBtn" type="button" class="ghost mini-tool-btn" aria-expanded="false"
+            aria-controls="toolsPanel">工具</button>
+        </div>
+      </div>
+      <div id="chatMessages" class="chat-messages">
+        <div class="chat-msg assistant">你好，我可以帮你生成路网、抓取 OSM 或识别上传图片。</div>
+      </div>
+      <p class="logic-flow logic-flow-chat">基本逻辑：理解用户输入 → 整理文本和图片路径 → 提交给 LangChain Agent → 解析 Agent 输出 → 读取结果文件 → 返回聊天结果与下载产物</p>
+      <form id="chatForm" class="chat-form">
+        <textarea id="chatInput" name="message" rows="3"
+          placeholder="例如：帮我生成天安门附近500米路网；或帮我生成一张形状为 5,4 的规则路网地图；或上传一张卫星图，帮我提取道路；或上传一张手绘图，帮我识别道路"></textarea>
+        <div class="chat-actions">
+          <input id="chatImage" class="themed-file-input" name="image_file" type="file" accept="image/*,.tif,.tiff,.png,.jpg,.jpeg,.bmp" />
+          <button type="submit">发送</button>
+        </div>
+        <p class="hint">上传限制：仅支持图片格式（png/jpg/jpeg/bmp/webp/tif/tiff），单文件不超过 10MB。</p>
+      </form>
+    </section>
+
+    <section id="toolsPanel" class="grid tools-panel is-collapsed">
+      <article class="card tool-card tool-simple">
+        <h2>简单路网生成</h2>
+        <p class="card-desc">快速生成规则路网，输出节点、边和预览图。</p>
+        <p class="logic-flow">基本逻辑：读取行列和精度参数 → 调用规则路网生成器 → 生成节点和边数据 → 整理输出文件 → 返回预览与下载结果</p>
+        <form data-endpoint="/api/tasks/simple-network" class="api-form">
+          <label>行数 rows<input type="number" name="rows" min="1" value="5" required /></label>
+          <label>列数 cols<input type="number" name="cols" min="1" value="4" required /></label>
+          <label>精度(米，可选)<input type="number" step="0.5" name="precision_m"
+              placeholder="例如 500（默认445m，即比例尺0.004）" /></label>
+          <button type="submit">生成</button>
+        </form>
+      </article>
+
+      <article class="card tool-card tool-osm">
+        <h2>OSM 路网抓取</h2>
+        <p class="card-desc">按地点和半径抓取真实道路，自动导出 GMNS。</p>
+        <p class="logic-flow">基本逻辑：高德解析中心点 → 转 WGS84 → OSMnx 抓图 → 再按半径做圆形裁剪 → 导出GeoJSON、GMNS和预览图</p>
+        <form data-endpoint="/api/tasks/osm-network" class="api-form">
+          <label>地点<input type="text" name="place" value="北京市天安门" required /></label>
+          <label>半径(米)<input type="number" name="radius_m" min="10" step="10" max="5000" value="500" required /></label>
+          <div class="hint-block-osm">
+            <span class="hint-icon">🗺️📍</span>
+            <div class="hint-content">
+              <p>输入详细地址或著名地标，尽量写完整一些（如“北京市天安门”）。</p>
+              <p>半径建议不超过 2000 米，处理耗时与范围成正比，请耐心等待。</p>
+            </div>
+          </div>
+          <button type="submit">抓取</button>
+        </form>
+      </article>
+
+      <article class="card tool-card tool-hand">
+        <h2>手绘图识别</h2>
+        <p class="card-desc">识别手绘道路骨架，重建可下载的路网文件。</p>
+        <p class="logic-flow">基本逻辑：读取上传的手绘图 → 执行图像识别与骨架提取 → 重建路网结构 → 导出GeoJSON、GMNS与预览图 → 整理输出文件并返回结果</p>
+        <form data-endpoint="/api/tasks/handdrawn" class="api-form">
+          <!-- <label>图片路径（可选）<input type="text" name="image_path" placeholder="例如 ./resources/hand_drawn_1.jpg" /></label> -->
+          <!-- <label>上传图片（可选）<input type="file" name="image_file" -->
+          <label>上传图片<input class="themed-file-input" type="file" name="image_file" accept="image/*,.tif,.tiff,.png,.jpg,.jpeg,.bmp" /></label>
+          <!-- <p class="hint">路径和图像上传二选一，若都填则优先上传。上传限制：图片且不超过 10MB。</p> -->
+          <p class="hint">上传限制：图片且不超过 10MB。</p>
+          <p class="hint">上传限制：仅支持图片格式（png/jpg/jpeg/bmp/webp/tif/tiff）</p>
+          <button type="submit">识别</button>
+        </form>
+      </article>
+
+      <article class="card tool-card tool-sat">
+        <h2>卫星图提取</h2>
+        <p class="card-desc">从卫星提取道路并输出可视化路网结果。</p>
+        <p class="logic-flow">基本逻辑：读取上传的卫星图 → 执行道路提取模型 → 生成路网结果与预览图 → 导出GeoJSON、GMNS → 整理输出文件并返回结果</p>
+        <form data-endpoint="/api/tasks/satellite" class="api-form">
+          <!-- <label>图片路径（可选）<input type="text" name="image_path"
+              placeholder="例如 ./resources/raw_data/11728825_15.tiff" /></label> -->
+          <!-- <label>上传图片（可选）<input type="file" name="image_file"
+              accept="image/*,.tif,.tiff,.png,.jpg,.jpeg,.bmp" /></label> -->
+          <label>上传图片<input class="themed-file-input" type="file" name="image_file" accept="image/*,.tif,.tiff,.png,.jpg,.jpeg,.bmp" /></label>
+          <!-- <p class="hint">路径和图像上传二选一，若都填则优先上传。上传限制：图片且不超过 10MB。</p> -->
+          <p class="hint">上传限制：图片且不超过 10MB。</p>
+          <p class="hint">上传限制：仅支持图片格式（png/jpg/jpeg/bmp/webp/tif/tiff）</p>
+          <button type="submit">提取</button>
+        </form>
+      </article>
+    </section>
+
+    <section class="history-box">
+      <div class="history-head">
+        <h3>任务历史列表</h3>
+        <div class="head-actions">
+          <button id="clearHistoryBtn" type="button" class="ghost danger">一键删除</button>
+          <button id="refreshHistoryBtn" type="button" class="ghost">刷新</button>
+        </div>
+      </div>
+      <div id="historyList" class="history-list">
+        <p class="artifact-empty">暂无任务历史</p>
+      </div>
+    </section>
+
+    <section class="ops-grid">
+      <section class="result-box">
+        <div class="result-head">
+          <h3>运行过程</h3>
+          <div class="head-actions">
+            <button id="cancelTaskBtn" type="button" class="ghost cancel-action" disabled>取消任务</button>
+            <button id="clearBtn" type="button" class="ghost">清空</button>
+          </div>
+        </div>
+        <div class="task-metrics">
+          <div id="taskMeta">当前无任务</div>
+          <div class="progress-wrap" aria-label="任务进度条">
+            <div id="progressFill" class="progress-fill"></div>
+          </div>
+        </div>
+        <pre id="result">等待操作...</pre>
+        <div class="artifact-box">
+          <div class="artifact-head">
+            <h3>生成文件</h3>
+            <button id="downloadAllBtn" type="button" class="ghost mini-tool-btn map-mode-toggle artifact-download-btn" disabled>批量下载本任务</button>
+          </div>
+          <div id="artifactList" class="artifact-list">
+            <p class="artifact-empty">暂无可下载文件</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-box">
+        <div class="map-head">
+          <div class="map-head-main">
+            <h3>地理与路网可视化</h3>
+            <div class="map-head-meta">
+              <p id="mapHint">等待任务结果...</p>
+              <p id="mapOrientation" class="map-orientation">方向模式：未确定</p>
+            </div>
+          </div>
+          <div class="map-head-side">
+            <p id="mapBaseSource" class="map-base-source">底图：-</p>
+            <button id="toggleBaseModeBtn" type="button" class="ghost mini-tool-btn map-mode-toggle">切换为影像图</button>
+          </div>
+        </div>
+        <div id="networkMap"></div>
+      </section>
+    </section>
+
+  </main>
+
+  <div id="confirmDialog" class="confirm-dialog is-hidden" aria-hidden="true">
+    <div class="confirm-dialog-backdrop" data-confirm-close="backdrop"></div>
+    <div class="confirm-dialog-panel" role="dialog" aria-modal="true" aria-labelledby="confirmDialogTitle">
+      <h3 id="confirmDialogTitle">确认操作</h3>
+      <p id="confirmDialogMessage" class="confirm-dialog-message">请确认是否继续。</p>
+      <div class="confirm-dialog-actions">
+        <button id="confirmDialogCancel" type="button" class="ghost">取消</button>
+        <button id="confirmDialogConfirm" type="button" class="ghost danger">确认删除</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/vendor/leaflet.js"></script>
+  <script src="/static/vendor/leaflet.ChineseTmsProviders.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+
+</html>

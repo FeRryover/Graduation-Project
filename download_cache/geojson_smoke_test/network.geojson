@@ -1,0 +1,66 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "coordinate_mode": "geo",
+    "source_files": {
+      "nodes": "download_cache\\geojson_smoke_test\\nodes.csv",
+      "links": "download_cache\\geojson_smoke_test\\links.csv"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "1",
+        "Latitude": "39.9",
+        "Longitude": "116.4",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.4,
+          39.9
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "ID": "2",
+        "Latitude": "39.91",
+        "Longitude": "116.41",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.41,
+          39.91
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "From_Node": "1",
+        "To_Node": "2",
+        "geometry": "LINESTRING (116.4 39.9, 116.41 39.91)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.4,
+            39.9
+          ],
+          [
+            116.41,
+            39.91
+          ]
+        ]
+      }
+    }
+  ]
+}

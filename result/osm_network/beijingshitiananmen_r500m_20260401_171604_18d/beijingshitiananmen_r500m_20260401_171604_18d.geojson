@@ -1,0 +1,3857 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "coordinate_mode": "geo",
+    "source_files": {
+      "nodes": "result\\osm_network\\beijingshitiananmen_r500m_20260401_171604_18d\\node.csv",
+      "links": "result\\osm_network\\beijingshitiananmen_r500m_20260401_171604_18d\\link.csv"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "1",
+        "osm_node_id": "25248785",
+        "ctrl_type": "signal",
+        "x_coord": "116.3889280",
+        "y_coord": "39.9059990",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.388928,
+          39.905999
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "2",
+        "osm_node_id": "9063921183",
+        "ctrl_type": "",
+        "x_coord": "116.3894460",
+        "y_coord": "39.9060160",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.389446,
+          39.906016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "3",
+        "osm_node_id": "25248786",
+        "ctrl_type": "signal",
+        "x_coord": "116.3926310",
+        "y_coord": "39.9061130",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.392631,
+          39.906113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "4",
+        "osm_node_id": "9063921186",
+        "ctrl_type": "",
+        "x_coord": "116.3930800",
+        "y_coord": "39.9061260",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39308,
+          39.906126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "5",
+        "osm_node_id": "321607233",
+        "ctrl_type": "signal",
+        "x_coord": "116.3898400",
+        "y_coord": "39.9062730",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.38984,
+          39.906273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "6",
+        "osm_node_id": "9063921182",
+        "ctrl_type": "",
+        "x_coord": "116.3894300",
+        "y_coord": "39.9062600",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.38943,
+          39.90626
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "7",
+        "osm_node_id": "330841408",
+        "ctrl_type": "signal",
+        "x_coord": "116.3936160",
+        "y_coord": "39.9063960",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.393616,
+          39.906396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "8",
+        "osm_node_id": "9063921187",
+        "ctrl_type": "",
+        "x_coord": "116.3930700",
+        "y_coord": "39.9063730",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39307,
+          39.906373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "9",
+        "osm_node_id": "733788806",
+        "ctrl_type": "",
+        "x_coord": "116.3856180",
+        "y_coord": "39.9069870",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385618,
+          39.906987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "10",
+        "osm_node_id": "6105550935",
+        "ctrl_type": "",
+        "x_coord": "116.3854910",
+        "y_coord": "39.9069840",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385491,
+          39.906984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "11",
+        "osm_node_id": "733788907",
+        "ctrl_type": "signal",
+        "x_coord": "116.3856490",
+        "y_coord": "39.9068050",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385649,
+          39.906805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "12",
+        "osm_node_id": "9378895553",
+        "ctrl_type": "",
+        "x_coord": "116.3856060",
+        "y_coord": "39.9073100",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385606,
+          39.90731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "13",
+        "osm_node_id": "6013587610",
+        "ctrl_type": "",
+        "x_coord": "116.3856750",
+        "y_coord": "39.9065600",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385675,
+          39.90656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "14",
+        "osm_node_id": "733789032",
+        "ctrl_type": "",
+        "x_coord": "116.3970140",
+        "y_coord": "39.9080700",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.397014,
+          39.90807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "15",
+        "osm_node_id": "6448666076",
+        "ctrl_type": "",
+        "x_coord": "116.3970230",
+        "y_coord": "39.9078990",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.397023,
+          39.907899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "16",
+        "osm_node_id": "733789295",
+        "ctrl_type": "",
+        "x_coord": "116.3970390",
+        "y_coord": "39.9075740",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.397039,
+          39.907574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "17",
+        "osm_node_id": "6448666067",
+        "ctrl_type": "",
+        "x_coord": "116.3970480",
+        "y_coord": "39.9073950",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.397048,
+          39.907395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "18",
+        "osm_node_id": "1687056659",
+        "ctrl_type": "",
+        "x_coord": "116.3932140",
+        "y_coord": "39.9037280",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.393214,
+          39.903728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "19",
+        "osm_node_id": "12628080424",
+        "ctrl_type": "signal",
+        "x_coord": "116.3932100",
+        "y_coord": "39.9038040",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39321,
+          39.903804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "20",
+        "osm_node_id": "2424906809",
+        "ctrl_type": "",
+        "x_coord": "116.3864280",
+        "y_coord": "39.9061690",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.386428,
+          39.906169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "21",
+        "osm_node_id": "330841279",
+        "ctrl_type": "signal",
+        "x_coord": "116.3858720",
+        "y_coord": "39.9061500",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385872,
+          39.90615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "22",
+        "osm_node_id": "4718004200",
+        "ctrl_type": "",
+        "x_coord": "116.3866440",
+        "y_coord": "39.9059230",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.386644,
+          39.905923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "23",
+        "osm_node_id": "5810315259",
+        "ctrl_type": "",
+        "x_coord": "116.3970510",
+        "y_coord": "39.9073360",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.397051,
+          39.907336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "24",
+        "osm_node_id": "9782405965",
+        "ctrl_type": "signal",
+        "x_coord": "116.3856750",
+        "y_coord": "39.9064730",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385675,
+          39.906473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "25",
+        "osm_node_id": "6111475091",
+        "ctrl_type": "",
+        "x_coord": "116.3855770",
+        "y_coord": "39.9080980",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385577,
+          39.908098
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "26",
+        "osm_node_id": "9378895556",
+        "ctrl_type": "",
+        "x_coord": "116.3855820",
+        "y_coord": "39.9079770",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385582,
+          39.907977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "27",
+        "osm_node_id": "6650358681",
+        "ctrl_type": "",
+        "x_coord": "116.3930970",
+        "y_coord": "39.9058970",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.393097,
+          39.905897
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "28",
+        "osm_node_id": "6650358684",
+        "ctrl_type": "",
+        "x_coord": "116.3894560",
+        "y_coord": "39.9058200",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.389456,
+          39.90582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "29",
+        "osm_node_id": "6009696479",
+        "ctrl_type": "",
+        "x_coord": "116.3895610",
+        "y_coord": "39.9036110",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.389561,
+          39.903611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "30",
+        "osm_node_id": "9034942210",
+        "ctrl_type": "signal",
+        "x_coord": "116.3966580",
+        "y_coord": "39.9062450",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396658,
+          39.906245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "31",
+        "osm_node_id": "9296257992",
+        "ctrl_type": "",
+        "x_coord": "116.3966820",
+        "y_coord": "39.9062470",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396682,
+          39.906247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "32",
+        "osm_node_id": "9296257987",
+        "ctrl_type": "",
+        "x_coord": "116.3889230",
+        "y_coord": "39.9062450",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.388923,
+          39.906245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "33",
+        "osm_node_id": "9296257988",
+        "ctrl_type": "",
+        "x_coord": "116.3898650",
+        "y_coord": "39.9060280",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.389865,
+          39.906028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "34",
+        "osm_node_id": "9296257990",
+        "ctrl_type": "",
+        "x_coord": "116.3937090",
+        "y_coord": "39.9061470",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.393709,
+          39.906147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "35",
+        "osm_node_id": "9296257989",
+        "ctrl_type": "",
+        "x_coord": "116.3926020",
+        "y_coord": "39.9063580",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.392602,
+          39.906358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "36",
+        "osm_node_id": "9296101695",
+        "ctrl_type": "",
+        "x_coord": "116.3856760",
+        "y_coord": "39.9063850",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.385676,
+          39.906385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "37",
+        "osm_node_id": "9316968441",
+        "ctrl_type": "",
+        "x_coord": "116.3874740",
+        "y_coord": "39.9062020",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.387474,
+          39.906202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "38",
+        "osm_node_id": "9317034206",
+        "ctrl_type": "",
+        "x_coord": "116.3950410",
+        "y_coord": "39.9061850",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.395041,
+          39.906185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "39",
+        "osm_node_id": "9296257991",
+        "ctrl_type": "",
+        "x_coord": "116.3966050",
+        "y_coord": "39.9065040",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396605,
+          39.906504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "40",
+        "osm_node_id": "9317006999",
+        "ctrl_type": "",
+        "x_coord": "116.3961260",
+        "y_coord": "39.9064920",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396126,
+          39.906492
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "41",
+        "osm_node_id": "9316968442",
+        "ctrl_type": "",
+        "x_coord": "116.3872180",
+        "y_coord": "39.9061950",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.387218,
+          39.906195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "42",
+        "osm_node_id": "9317034201",
+        "ctrl_type": "",
+        "x_coord": "116.3960130",
+        "y_coord": "39.9064880",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.396013,
+          39.906488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "43",
+        "osm_node_id": "9317034202",
+        "ctrl_type": "",
+        "x_coord": "116.3958200",
+        "y_coord": "39.9064770",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.39582,
+          39.906477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "44",
+        "osm_node_id": "12628080473",
+        "ctrl_type": "",
+        "x_coord": "116.3931790",
+        "y_coord": "39.9043720",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.393179,
+          39.904372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "",
+        "node_id": "45",
+        "osm_node_id": "12628080425",
+        "ctrl_type": "",
+        "x_coord": "116.3931000",
+        "y_coord": "39.9058360",
+        "is_boundary": "",
+        "activity_type": "",
+        "poi_id": "",
+        "zone_id": "",
+        "notes": "",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.3931,
+          39.905836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "1",
+        "name": "西长安街",
+        "osm_way_id": "0",
+        "from_node_id": "1",
+        "to_node_id": "2",
+        "directed": "1",
+        "geometry": "LINESTRING (116.388928 39.905999, 116.389446 39.906016)",
+        "dir_flag": "1",
+        "length": "44.22",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.388928,
+            39.905999
+          ],
+          [
+            116.389446,
+            39.906016
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "2",
+        "name": "西长安街",
+        "osm_way_id": "1",
+        "from_node_id": "3",
+        "to_node_id": "4",
+        "directed": "1",
+        "geometry": "LINESTRING (116.392631 39.906113, 116.39308 39.906126)",
+        "dir_flag": "1",
+        "length": "38.33",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.392631,
+            39.906113
+          ],
+          [
+            116.39308,
+            39.906126
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "3",
+        "name": "东长安街",
+        "osm_way_id": "36",
+        "from_node_id": "5",
+        "to_node_id": "6",
+        "directed": "1",
+        "geometry": "LINESTRING (116.38984 39.906273, 116.38943 39.90626)",
+        "dir_flag": "1",
+        "length": "35.00",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.38984,
+            39.906273
+          ],
+          [
+            116.38943,
+            39.90626
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "4",
+        "name": "东长安街",
+        "osm_way_id": "49",
+        "from_node_id": "7",
+        "to_node_id": "8",
+        "directed": "1",
+        "geometry": "LINESTRING (116.393616 39.906396, 116.39307 39.906373)",
+        "dir_flag": "1",
+        "length": "46.64",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.393616,
+            39.906396
+          ],
+          [
+            116.39307,
+            39.906373
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "5",
+        "name": "大宴乐胡同",
+        "osm_way_id": "63",
+        "from_node_id": "9",
+        "to_node_id": "10",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385491 39.906984)",
+        "dir_flag": "1",
+        "length": "10.84",
+        "facility_type": "residential",
+        "link_type": "6",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385491,
+            39.906984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "6",
+        "name": "大宴乐胡同",
+        "osm_way_id": "63",
+        "from_node_id": "10",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385491 39.906984, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "10.84",
+        "facility_type": "residential",
+        "link_type": "6",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385491,
+            39.906984
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "7",
+        "name": "南长街",
+        "osm_way_id": "64",
+        "from_node_id": "9",
+        "to_node_id": "11",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385649 39.906805)",
+        "dir_flag": "1",
+        "length": "20.41",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385649,
+            39.906805
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "8",
+        "name": "南长街",
+        "osm_way_id": "64",
+        "from_node_id": "11",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385649 39.906805, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "20.41",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385649,
+            39.906805
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "9",
+        "name": "南长街",
+        "osm_way_id": "65",
+        "from_node_id": "9",
+        "to_node_id": "12",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385606 39.90731)",
+        "dir_flag": "1",
+        "length": "35.93",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385606,
+            39.90731
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "10",
+        "name": "南长街",
+        "osm_way_id": "65",
+        "from_node_id": "12",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385606 39.90731, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "35.93",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385606,
+            39.90731
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "11",
+        "name": "南长街",
+        "osm_way_id": "70",
+        "from_node_id": "11",
+        "to_node_id": "13",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385649 39.906805, 116.385675 39.90656)",
+        "dir_flag": "1",
+        "length": "27.33",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385649,
+            39.906805
+          ],
+          [
+            116.385675,
+            39.90656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "12",
+        "name": "南长街",
+        "osm_way_id": "70",
+        "from_node_id": "13",
+        "to_node_id": "11",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.90656, 116.385649 39.906805)",
+        "dir_flag": "1",
+        "length": "27.33",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.90656
+          ],
+          [
+            116.385649,
+            39.906805
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "13",
+        "name": "南长街",
+        "osm_way_id": "71",
+        "from_node_id": "11",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385649 39.906805, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "20.41",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385649,
+            39.906805
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "14",
+        "name": "南长街",
+        "osm_way_id": "71",
+        "from_node_id": "9",
+        "to_node_id": "11",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385649 39.906805)",
+        "dir_flag": "1",
+        "length": "20.41",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385649,
+            39.906805
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "15",
+        "name": "南池子大街",
+        "osm_way_id": "73",
+        "from_node_id": "14",
+        "to_node_id": "15",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397014 39.90807, 116.397023 39.907899)",
+        "dir_flag": "1",
+        "length": "19.03",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397014,
+            39.90807
+          ],
+          [
+            116.397023,
+            39.907899
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "16",
+        "name": "南池子大街",
+        "osm_way_id": "73",
+        "from_node_id": "15",
+        "to_node_id": "14",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397023 39.907899, 116.397014 39.90807)",
+        "dir_flag": "1",
+        "length": "19.03",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397023,
+            39.907899
+          ],
+          [
+            116.397014,
+            39.90807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "17",
+        "name": "南池子大街",
+        "osm_way_id": "77",
+        "from_node_id": "16",
+        "to_node_id": "15",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397039 39.907574, 116.397023 39.907899)",
+        "dir_flag": "1",
+        "length": "36.16",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397039,
+            39.907574
+          ],
+          [
+            116.397023,
+            39.907899
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "18",
+        "name": "南池子大街",
+        "osm_way_id": "77",
+        "from_node_id": "15",
+        "to_node_id": "16",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397023 39.907899, 116.397039 39.907574)",
+        "dir_flag": "1",
+        "length": "36.16",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397023,
+            39.907899
+          ],
+          [
+            116.397039,
+            39.907574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "19",
+        "name": "南池子大街",
+        "osm_way_id": "78",
+        "from_node_id": "16",
+        "to_node_id": "17",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397039 39.907574, 116.397048 39.907395)",
+        "dir_flag": "1",
+        "length": "19.92",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397039,
+            39.907574
+          ],
+          [
+            116.397048,
+            39.907395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "20",
+        "name": "南池子大街",
+        "osm_way_id": "78",
+        "from_node_id": "17",
+        "to_node_id": "16",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397048 39.907395, 116.397039 39.907574)",
+        "dir_flag": "1",
+        "length": "19.92",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397048,
+            39.907395
+          ],
+          [
+            116.397039,
+            39.907574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "21",
+        "name": "广场东侧路",
+        "osm_way_id": "115",
+        "from_node_id": "18",
+        "to_node_id": "19",
+        "directed": "1",
+        "geometry": "LINESTRING (116.393214 39.903728, 116.39321 39.903804)",
+        "dir_flag": "1",
+        "length": "8.46",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "70",
+        "lanes": "4",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.393214,
+            39.903728
+          ],
+          [
+            116.39321,
+            39.903804
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "22",
+        "name": "西长安街",
+        "osm_way_id": "138",
+        "from_node_id": "20",
+        "to_node_id": "21",
+        "directed": "1",
+        "geometry": "LINESTRING (116.386428 39.906169, 116.385872 39.90615)",
+        "dir_flag": "1",
+        "length": "47.47",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.386428,
+            39.906169
+          ],
+          [
+            116.385872,
+            39.90615
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "23",
+        "name": "西长安街",
+        "osm_way_id": "247",
+        "from_node_id": "22",
+        "to_node_id": "1",
+        "directed": "1",
+        "geometry": "LINESTRING (116.386644 39.905923, 116.388928 39.905999)",
+        "dir_flag": "1",
+        "length": "195.00",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.386644,
+            39.905923
+          ],
+          [
+            116.388928,
+            39.905999
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "24",
+        "name": "南池子大街",
+        "osm_way_id": "291",
+        "from_node_id": "23",
+        "to_node_id": "17",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397051 39.907336, 116.397048 39.907395)",
+        "dir_flag": "1",
+        "length": "6.57",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397051,
+            39.907336
+          ],
+          [
+            116.397048,
+            39.907395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "25",
+        "name": "南池子大街",
+        "osm_way_id": "291",
+        "from_node_id": "17",
+        "to_node_id": "23",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397048 39.907395, 116.397051 39.907336)",
+        "dir_flag": "1",
+        "length": "6.57",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397048,
+            39.907395
+          ],
+          [
+            116.397051,
+            39.907336
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "26",
+        "name": "南长街",
+        "osm_way_id": "410",
+        "from_node_id": "13",
+        "to_node_id": "24",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.90656, 116.385675 39.906473)",
+        "dir_flag": "1",
+        "length": "9.67",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.90656
+          ],
+          [
+            116.385675,
+            39.906473
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "27",
+        "name": "南长街",
+        "osm_way_id": "410",
+        "from_node_id": "24",
+        "to_node_id": "13",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.906473, 116.385675 39.90656)",
+        "dir_flag": "1",
+        "length": "9.67",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.906473
+          ],
+          [
+            116.385675,
+            39.90656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "28",
+        "name": "南长街",
+        "osm_way_id": "411",
+        "from_node_id": "13",
+        "to_node_id": "11",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.90656, 116.385649 39.906805)",
+        "dir_flag": "1",
+        "length": "27.33",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.90656
+          ],
+          [
+            116.385649,
+            39.906805
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "29",
+        "name": "南长街",
+        "osm_way_id": "411",
+        "from_node_id": "11",
+        "to_node_id": "13",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385649 39.906805, 116.385675 39.90656)",
+        "dir_flag": "1",
+        "length": "27.33",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385649,
+            39.906805
+          ],
+          [
+            116.385675,
+            39.90656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "30",
+        "name": "大宴乐胡同",
+        "osm_way_id": "556",
+        "from_node_id": "10",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385491 39.906984, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "10.84",
+        "facility_type": "residential",
+        "link_type": "6",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385491,
+            39.906984
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "31",
+        "name": "大宴乐胡同",
+        "osm_way_id": "556",
+        "from_node_id": "9",
+        "to_node_id": "10",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385491 39.906984)",
+        "dir_flag": "1",
+        "length": "10.84",
+        "facility_type": "residential",
+        "link_type": "6",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385491,
+            39.906984
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "32",
+        "name": "南长街",
+        "osm_way_id": "558",
+        "from_node_id": "25",
+        "to_node_id": "26",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385577 39.908098, 116.385582 39.907977)",
+        "dir_flag": "1",
+        "length": "13.46",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385577,
+            39.908098
+          ],
+          [
+            116.385582,
+            39.907977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "33",
+        "name": "南长街",
+        "osm_way_id": "558",
+        "from_node_id": "26",
+        "to_node_id": "25",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385582 39.907977, 116.385577 39.908098)",
+        "dir_flag": "1",
+        "length": "13.46",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385582,
+            39.907977
+          ],
+          [
+            116.385577,
+            39.908098
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "34",
+        "name": "南池子大街",
+        "osm_way_id": "1827",
+        "from_node_id": "17",
+        "to_node_id": "16",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397048 39.907395, 116.397039 39.907574)",
+        "dir_flag": "1",
+        "length": "19.92",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397048,
+            39.907395
+          ],
+          [
+            116.397039,
+            39.907574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "35",
+        "name": "南池子大街",
+        "osm_way_id": "1827",
+        "from_node_id": "16",
+        "to_node_id": "17",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397039 39.907574, 116.397048 39.907395)",
+        "dir_flag": "1",
+        "length": "19.92",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397039,
+            39.907574
+          ],
+          [
+            116.397048,
+            39.907395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "36",
+        "name": "南池子大街",
+        "osm_way_id": "1828",
+        "from_node_id": "17",
+        "to_node_id": "23",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397048 39.907395, 116.397051 39.907336)",
+        "dir_flag": "1",
+        "length": "6.57",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397048,
+            39.907395
+          ],
+          [
+            116.397051,
+            39.907336
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "37",
+        "name": "南池子大街",
+        "osm_way_id": "1828",
+        "from_node_id": "23",
+        "to_node_id": "17",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397051 39.907336, 116.397048 39.907395)",
+        "dir_flag": "1",
+        "length": "6.57",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397051,
+            39.907336
+          ],
+          [
+            116.397048,
+            39.907395
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "38",
+        "name": "南池子大街",
+        "osm_way_id": "1829",
+        "from_node_id": "15",
+        "to_node_id": "14",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397023 39.907899, 116.397014 39.90807)",
+        "dir_flag": "1",
+        "length": "19.03",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397023,
+            39.907899
+          ],
+          [
+            116.397014,
+            39.90807
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "39",
+        "name": "南池子大街",
+        "osm_way_id": "1829",
+        "from_node_id": "14",
+        "to_node_id": "15",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397014 39.90807, 116.397023 39.907899)",
+        "dir_flag": "1",
+        "length": "19.03",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397014,
+            39.90807
+          ],
+          [
+            116.397023,
+            39.907899
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "40",
+        "name": "南池子大街",
+        "osm_way_id": "1830",
+        "from_node_id": "15",
+        "to_node_id": "16",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397023 39.907899, 116.397039 39.907574)",
+        "dir_flag": "1",
+        "length": "36.16",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397023,
+            39.907899
+          ],
+          [
+            116.397039,
+            39.907574
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "41",
+        "name": "南池子大街",
+        "osm_way_id": "1830",
+        "from_node_id": "16",
+        "to_node_id": "15",
+        "directed": "1",
+        "geometry": "LINESTRING (116.397039 39.907574, 116.397023 39.907899)",
+        "dir_flag": "1",
+        "length": "36.16",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "1",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.397039,
+            39.907574
+          ],
+          [
+            116.397023,
+            39.907899
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "42",
+        "name": "",
+        "osm_way_id": "1875",
+        "from_node_id": "27",
+        "to_node_id": "4",
+        "directed": "1",
+        "geometry": "LINESTRING (116.393097 39.905897, 116.39308 39.906126)",
+        "dir_flag": "1",
+        "length": "25.50",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.393097,
+            39.905897
+          ],
+          [
+            116.39308,
+            39.906126
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "43",
+        "name": "广场西侧路",
+        "osm_way_id": "1878",
+        "from_node_id": "28",
+        "to_node_id": "29",
+        "directed": "1",
+        "geometry": "LINESTRING (116.389456 39.90582, 116.389561 39.903611)",
+        "dir_flag": "1",
+        "length": "245.79",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.389456,
+            39.90582
+          ],
+          [
+            116.389561,
+            39.903611
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "44",
+        "name": "东长安街",
+        "osm_way_id": "2005",
+        "from_node_id": "30",
+        "to_node_id": "31",
+        "directed": "1",
+        "geometry": "LINESTRING (116.396658 39.906245, 116.396682 39.906247)",
+        "dir_flag": "1",
+        "length": "2.06",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.396658,
+            39.906245
+          ],
+          [
+            116.396682,
+            39.906247
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "45",
+        "name": "",
+        "osm_way_id": "2006",
+        "from_node_id": "6",
+        "to_node_id": "2",
+        "directed": "1",
+        "geometry": "LINESTRING (116.38943 39.90626, 116.389446 39.906016)",
+        "dir_flag": "1",
+        "length": "27.17",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.38943,
+            39.90626
+          ],
+          [
+            116.389446,
+            39.906016
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "46",
+        "name": "西长安街",
+        "osm_way_id": "2007",
+        "from_node_id": "6",
+        "to_node_id": "32",
+        "directed": "1",
+        "geometry": "LINESTRING (116.38943 39.90626, 116.388923 39.906245)",
+        "dir_flag": "1",
+        "length": "43.28",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.38943,
+            39.90626
+          ],
+          [
+            116.388923,
+            39.906245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "47",
+        "name": "西长安街",
+        "osm_way_id": "2008",
+        "from_node_id": "2",
+        "to_node_id": "33",
+        "directed": "1",
+        "geometry": "LINESTRING (116.389446 39.906016, 116.389865 39.906028)",
+        "dir_flag": "1",
+        "length": "35.76",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.389446,
+            39.906016
+          ],
+          [
+            116.389865,
+            39.906028
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "48",
+        "name": "广场西侧路",
+        "osm_way_id": "2009",
+        "from_node_id": "2",
+        "to_node_id": "28",
+        "directed": "1",
+        "geometry": "LINESTRING (116.389446 39.906016, 116.389456 39.90582)",
+        "dir_flag": "1",
+        "length": "21.81",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.389446,
+            39.906016
+          ],
+          [
+            116.389456,
+            39.90582
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "49",
+        "name": "东长安街",
+        "osm_way_id": "2010",
+        "from_node_id": "4",
+        "to_node_id": "34",
+        "directed": "1",
+        "geometry": "LINESTRING (116.39308 39.906126, 116.393709 39.906147)",
+        "dir_flag": "1",
+        "length": "53.70",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.39308,
+            39.906126
+          ],
+          [
+            116.393709,
+            39.906147
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "50",
+        "name": "",
+        "osm_way_id": "2011",
+        "from_node_id": "4",
+        "to_node_id": "8",
+        "directed": "1",
+        "geometry": "LINESTRING (116.39308 39.906126, 116.39307 39.906373)",
+        "dir_flag": "1",
+        "length": "27.48",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.39308,
+            39.906126
+          ],
+          [
+            116.39307,
+            39.906373
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "51",
+        "name": "东长安街",
+        "osm_way_id": "2012",
+        "from_node_id": "8",
+        "to_node_id": "35",
+        "directed": "1",
+        "geometry": "LINESTRING (116.39307 39.906373, 116.392602 39.906358)",
+        "dir_flag": "1",
+        "length": "39.95",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.39307,
+            39.906373
+          ],
+          [
+            116.392602,
+            39.906358
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "52",
+        "name": "南长街",
+        "osm_way_id": "2015",
+        "from_node_id": "36",
+        "to_node_id": "24",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385676 39.906385, 116.385675 39.906473)",
+        "dir_flag": "1",
+        "length": "9.79",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385676,
+            39.906385
+          ],
+          [
+            116.385675,
+            39.906473
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "53",
+        "name": "南长街",
+        "osm_way_id": "2015",
+        "from_node_id": "24",
+        "to_node_id": "36",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.906473, 116.385676 39.906385)",
+        "dir_flag": "1",
+        "length": "9.79",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.906473
+          ],
+          [
+            116.385676,
+            39.906385
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "54",
+        "name": "西长安街",
+        "osm_way_id": "2017",
+        "from_node_id": "32",
+        "to_node_id": "37",
+        "directed": "1",
+        "geometry": "LINESTRING (116.388923 39.906245, 116.387474 39.906202)",
+        "dir_flag": "1",
+        "length": "123.69",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.388923,
+            39.906245
+          ],
+          [
+            116.387474,
+            39.906202
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "55",
+        "name": "西长安街",
+        "osm_way_id": "2018",
+        "from_node_id": "33",
+        "to_node_id": "3",
+        "directed": "1",
+        "geometry": "LINESTRING (116.389865 39.906028, 116.392631 39.906113)",
+        "dir_flag": "1",
+        "length": "236.12",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.389865,
+            39.906028
+          ],
+          [
+            116.392631,
+            39.906113
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "56",
+        "name": "东长安街",
+        "osm_way_id": "2019",
+        "from_node_id": "35",
+        "to_node_id": "5",
+        "directed": "1",
+        "geometry": "LINESTRING (116.392602 39.906358, 116.38984 39.906273)",
+        "dir_flag": "1",
+        "length": "235.78",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.392602,
+            39.906358
+          ],
+          [
+            116.38984,
+            39.906273
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "57",
+        "name": "东长安街",
+        "osm_way_id": "2020",
+        "from_node_id": "34",
+        "to_node_id": "38",
+        "directed": "1",
+        "geometry": "LINESTRING (116.393709 39.906147, 116.395041 39.906185)",
+        "dir_flag": "1",
+        "length": "113.69",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.393709,
+            39.906147
+          ],
+          [
+            116.395041,
+            39.906185
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "58",
+        "name": "东长安街",
+        "osm_way_id": "2021",
+        "from_node_id": "39",
+        "to_node_id": "40",
+        "directed": "1",
+        "geometry": "LINESTRING (116.396605 39.906504, 116.396126 39.906492)",
+        "dir_flag": "1",
+        "length": "40.88",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.396605,
+            39.906504
+          ],
+          [
+            116.396126,
+            39.906492
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "59",
+        "name": "西长安街",
+        "osm_way_id": "2022",
+        "from_node_id": "37",
+        "to_node_id": "41",
+        "directed": "1",
+        "geometry": "LINESTRING (116.387474 39.906202, 116.387218 39.906195)",
+        "dir_flag": "1",
+        "length": "21.85",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.387474,
+            39.906202
+          ],
+          [
+            116.387218,
+            39.906195
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "60",
+        "name": "西长安街",
+        "osm_way_id": "2023",
+        "from_node_id": "41",
+        "to_node_id": "20",
+        "directed": "1",
+        "geometry": "LINESTRING (116.387218 39.906195, 116.386428 39.906169)",
+        "dir_flag": "1",
+        "length": "67.45",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.387218,
+            39.906195
+          ],
+          [
+            116.386428,
+            39.906169
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "61",
+        "name": "东长安街",
+        "osm_way_id": "2024",
+        "from_node_id": "40",
+        "to_node_id": "42",
+        "directed": "1",
+        "geometry": "LINESTRING (116.396126 39.906492, 116.396013 39.906488)",
+        "dir_flag": "1",
+        "length": "9.65",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.396126,
+            39.906492
+          ],
+          [
+            116.396013,
+            39.906488
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "62",
+        "name": "东长安街",
+        "osm_way_id": "2025",
+        "from_node_id": "42",
+        "to_node_id": "43",
+        "directed": "1",
+        "geometry": "LINESTRING (116.396013 39.906488, 116.39582 39.906477)",
+        "dir_flag": "1",
+        "length": "16.51",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.396013,
+            39.906488
+          ],
+          [
+            116.39582,
+            39.906477
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "63",
+        "name": "东长安街",
+        "osm_way_id": "2026",
+        "from_node_id": "43",
+        "to_node_id": "7",
+        "directed": "1",
+        "geometry": "LINESTRING (116.39582 39.906477, 116.393616 39.906396)",
+        "dir_flag": "1",
+        "length": "188.21",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.39582,
+            39.906477
+          ],
+          [
+            116.393616,
+            39.906396
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "64",
+        "name": "东长安街",
+        "osm_way_id": "2027",
+        "from_node_id": "38",
+        "to_node_id": "30",
+        "directed": "1",
+        "geometry": "LINESTRING (116.395041 39.906185, 116.396658 39.906245)",
+        "dir_flag": "1",
+        "length": "138.09",
+        "facility_type": "trunk",
+        "link_type": "2",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.395041,
+            39.906185
+          ],
+          [
+            116.396658,
+            39.906245
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "65",
+        "name": "南长街",
+        "osm_way_id": "2028",
+        "from_node_id": "12",
+        "to_node_id": "9",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385606 39.90731, 116.385618 39.906987)",
+        "dir_flag": "1",
+        "length": "35.93",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385606,
+            39.90731
+          ],
+          [
+            116.385618,
+            39.906987
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "66",
+        "name": "南长街",
+        "osm_way_id": "2028",
+        "from_node_id": "9",
+        "to_node_id": "12",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385618 39.906987, 116.385606 39.90731)",
+        "dir_flag": "1",
+        "length": "35.93",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385618,
+            39.906987
+          ],
+          [
+            116.385606,
+            39.90731
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "67",
+        "name": "南长街",
+        "osm_way_id": "2029",
+        "from_node_id": "12",
+        "to_node_id": "26",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385606 39.90731, 116.385582 39.907977)",
+        "dir_flag": "1",
+        "length": "74.20",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385606,
+            39.90731
+          ],
+          [
+            116.385582,
+            39.907977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "68",
+        "name": "南长街",
+        "osm_way_id": "2029",
+        "from_node_id": "26",
+        "to_node_id": "12",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385582 39.907977, 116.385606 39.90731)",
+        "dir_flag": "1",
+        "length": "74.20",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385582,
+            39.907977
+          ],
+          [
+            116.385606,
+            39.90731
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "69",
+        "name": "南长街",
+        "osm_way_id": "2030",
+        "from_node_id": "26",
+        "to_node_id": "12",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385582 39.907977, 116.385606 39.90731)",
+        "dir_flag": "1",
+        "length": "74.20",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385582,
+            39.907977
+          ],
+          [
+            116.385606,
+            39.90731
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "70",
+        "name": "南长街",
+        "osm_way_id": "2030",
+        "from_node_id": "12",
+        "to_node_id": "26",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385606 39.90731, 116.385582 39.907977)",
+        "dir_flag": "1",
+        "length": "74.20",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385606,
+            39.90731
+          ],
+          [
+            116.385582,
+            39.907977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "71",
+        "name": "南长街",
+        "osm_way_id": "2031",
+        "from_node_id": "26",
+        "to_node_id": "25",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385582 39.907977, 116.385577 39.908098)",
+        "dir_flag": "1",
+        "length": "13.46",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385582,
+            39.907977
+          ],
+          [
+            116.385577,
+            39.908098
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "72",
+        "name": "南长街",
+        "osm_way_id": "2031",
+        "from_node_id": "25",
+        "to_node_id": "26",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385577 39.908098, 116.385582 39.907977)",
+        "dir_flag": "1",
+        "length": "13.46",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385577,
+            39.908098
+          ],
+          [
+            116.385582,
+            39.907977
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "73",
+        "name": "南长街",
+        "osm_way_id": "2072",
+        "from_node_id": "24",
+        "to_node_id": "36",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.906473, 116.385676 39.906385)",
+        "dir_flag": "1",
+        "length": "9.79",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.906473
+          ],
+          [
+            116.385676,
+            39.906385
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "74",
+        "name": "南长街",
+        "osm_way_id": "2072",
+        "from_node_id": "36",
+        "to_node_id": "24",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385676 39.906385, 116.385675 39.906473)",
+        "dir_flag": "1",
+        "length": "9.79",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385676,
+            39.906385
+          ],
+          [
+            116.385675,
+            39.906473
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "75",
+        "name": "南长街",
+        "osm_way_id": "2073",
+        "from_node_id": "24",
+        "to_node_id": "13",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.906473, 116.385675 39.90656)",
+        "dir_flag": "1",
+        "length": "9.67",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.906473
+          ],
+          [
+            116.385675,
+            39.90656
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "76",
+        "name": "南长街",
+        "osm_way_id": "2073",
+        "from_node_id": "13",
+        "to_node_id": "24",
+        "directed": "1",
+        "geometry": "LINESTRING (116.385675 39.90656, 116.385675 39.906473)",
+        "dir_flag": "1",
+        "length": "9.67",
+        "facility_type": "tertiary",
+        "link_type": "5",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.385675,
+            39.90656
+          ],
+          [
+            116.385675,
+            39.906473
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "77",
+        "name": "广场东侧路",
+        "osm_way_id": "2173",
+        "from_node_id": "19",
+        "to_node_id": "44",
+        "directed": "1",
+        "geometry": "LINESTRING (116.39321 39.903804, 116.393179 39.904372)",
+        "dir_flag": "1",
+        "length": "63.21",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "70",
+        "lanes": "4",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.39321,
+            39.903804
+          ],
+          [
+            116.393179,
+            39.904372
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "78",
+        "name": "",
+        "osm_way_id": "2174",
+        "from_node_id": "45",
+        "to_node_id": "27",
+        "directed": "1",
+        "geometry": "LINESTRING (116.3931 39.905836, 116.393097 39.905897)",
+        "dir_flag": "1",
+        "length": "6.79",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "",
+        "lanes": "",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.3931,
+            39.905836
+          ],
+          [
+            116.393097,
+            39.905897
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "79",
+        "name": "广场东侧路",
+        "osm_way_id": "2175",
+        "from_node_id": "44",
+        "to_node_id": "45",
+        "directed": "1",
+        "geometry": "LINESTRING (116.393179 39.904372, 116.3931 39.905836)",
+        "dir_flag": "1",
+        "length": "162.93",
+        "facility_type": "secondary",
+        "link_type": "4",
+        "free_speed": "70",
+        "lanes": "5",
+        "capacity": "",
+        "allowed_uses": "auto",
+        "notes": "",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            116.393179,
+            39.904372
+          ],
+          [
+            116.3931,
+            39.905836
+          ]
+        ]
+      }
+    }
+  ]
+}

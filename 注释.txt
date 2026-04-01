@@ -1,0 +1,16 @@
+Database是自己创造的文件夹，里面下载了搜寻到的相关数据集
+
+inverted_binary_pred_0.png：二值预测图，即AI 初步“画”出来的路。
+corners_detected.png：角点标注图 即AI 找出的路口和拐点。
+拓扑连线图：将点连成线的逻辑草图。
+
+gmns.zip：这是最终生成的标准交通路网数据集。里面包含了符合 GMNS（通用建模网络规范）标准的交通数据。
+
+best_result.jpg：最终合成效果图。
+
+jdjc_best_result.jpg / jdjc_result.jpg / jdjc_color_result.jpg：角点检测（JD - Junction Detection）结果图。
+
+gray_image.jpg：灰度化处理图。
+
+
+temp_result.jpg：临时中间结果图。

@@ -1,0 +1,5 @@
+osm2gmns == 0.7.3
+xpinyin == 0.7.6
+osmnx == 1.7.0
+urllib3 == 1.26.14
+requests == 2.28.1

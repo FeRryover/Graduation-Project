@@ -1,0 +1,27 @@
+# 注释以 # 开头
+# 忽略单个文件
+#secret.key
+#config/local.yml
+
+# 忽略某类文件（通配符）
+#*.log
+#*.tmp
+#*.pyc
+
+# 忽略整个文件夹（末尾加 /）
+#node_modules/
+#dist/
+#temp/
+
+# 只忽略根目录的文件/文件夹
+#/temp/
+#/.env
+
+
+# 反向忽略（例外）
+#*.log
+#!important.log  # 不忽略 important.log
+
+
+/Database/
+resources/best_model.pth

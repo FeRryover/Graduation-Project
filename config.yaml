@@ -1,0 +1,10 @@
+#OPENAI_API_TYPE : "azure"
+#OPENAI_API_VERSION : "2023-05-15"
+#OPENAI_API_BASE : "https://test-trans-app.openai.azure.com/"
+#OPENAI_API_KEY : "dae4a72a78c341178191bd6f8deb330b"
+
+MODEL_NAME: "glm-4.7"
+OPENAI_API_TYPE : "zhipu"
+OPENAI_API_VERSION : "v4"
+OPENAI_API_BASE : "https://open.bigmodel.cn/api/paas/v4"
+OPENAI_API_KEY : "03708aa29d9a499e959eeb7688d362dc.xvfN1TASI5DIf1zZ"
