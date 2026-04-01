@@ -15,11 +15,16 @@ class satellite_pic_road_extraction:
 
     @prompts(name='Extract Road from Satellite Image',
              description="""
-             Recognize a satellite road map image and provide a compressed GMNS file with road node details, along with a visual representation of the recognized road network.
+             Recognize a satellite road map image and provide a compressed GMNS file with road node details, a GeoJSON network file, and a visual representation of the recognized road network.
              The input should be a path to the satellite image which needs to be processed.
-             The output is a path to the generated zip file containing gmns-style files, and a path to the visual representation of the recognized road network.
+             The output is a path to the generated zip file containing gmns-style files, a path to the generated GeoJSON file, and a path to the visual representation of the recognized road network.
              """)
 
     def inference(self, imgfile: str) -> str:
-        GMNS_path, best_img_name = satellite_predict.predict_road_from_satellite_image(imgfile)
-        return f'The path to the generated zipped gmns file is: `{GMNS_path}`. The path to the visual representation of the recognized road network is: `{best_img_name}`. Process finished.'
+        gmns_path, best_img_name, geojson_path = satellite_predict.predict_road_from_satellite_image(imgfile)
+        return (
+            f'The path to the generated zipped gmns file is: `{gmns_path}`. '
+            f'The path to the generated GeoJSON network file is: `{geojson_path}`. '
+            f'The path to the visual representation of the recognized road network is: `{best_img_name}`. '
+            'Process finished.'
+        )

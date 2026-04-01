@@ -1,0 +1,2812 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "coordinate_mode": "image",
+    "source_files": {
+      "nodes": "result\\satellite\\task_20260401_223238_310\\gmns\\corners.csv",
+      "links": "result\\satellite\\task_20260401_223238_310\\gmns\\link.csv"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "0",
+        "x_coord": "0.000272",
+        "y_coord": "0.000559",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000272,
+          0.000559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "1",
+        "x_coord": "0.000186",
+        "y_coord": "0.000398",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000186,
+          0.000398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "2",
+        "x_coord": "0.000094",
+        "y_coord": "0.000203",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.4e-05,
+          0.000203
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "3",
+        "x_coord": "0.000283",
+        "y_coord": "0.000654",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000283,
+          0.000654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "4",
+        "x_coord": "0.000245",
+        "y_coord": "0.000652",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000245,
+          0.000652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "5",
+        "x_coord": "0.000650",
+        "y_coord": "0.000628",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00065,
+          0.000628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "6",
+        "x_coord": "0.000040",
+        "y_coord": "0.000341",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4e-05,
+          0.000341
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "7",
+        "x_coord": "0.000185",
+        "y_coord": "0.000779",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000185,
+          0.000779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "8",
+        "x_coord": "0.000166",
+        "y_coord": "0.000682",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000166,
+          0.000682
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "9",
+        "x_coord": "0.000161",
+        "y_coord": "0.000629",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000161,
+          0.000629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "10",
+        "x_coord": "0.000310",
+        "y_coord": "0.000474",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00031,
+          0.000474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "11",
+        "x_coord": "0.000117",
+        "y_coord": "0.000421",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000117,
+          0.000421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "12",
+        "x_coord": "0.000787",
+        "y_coord": "0.000797",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000787,
+          0.000797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "13",
+        "x_coord": "0.000271",
+        "y_coord": "0.000752",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000271,
+          0.000752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "14",
+        "x_coord": "0.000082",
+        "y_coord": "0.000706",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2e-05,
+          0.000706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "15",
+        "x_coord": "0.000205",
+        "y_coord": "0.000621",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000205,
+          0.000621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "16",
+        "x_coord": "0.000050",
+        "y_coord": "0.000516",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5e-05,
+          0.000516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "17",
+        "x_coord": "0.000274",
+        "y_coord": "0.000506",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000274,
+          0.000506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "18",
+        "x_coord": "0.000133",
+        "y_coord": "0.000502",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000133,
+          0.000502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "19",
+        "x_coord": "0.000493",
+        "y_coord": "0.000483",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000493,
+          0.000483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "20",
+        "x_coord": "0.000272",
+        "y_coord": "0.000472",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000272,
+          0.000472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "21",
+        "x_coord": "0.000194",
+        "y_coord": "0.000451",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000194,
+          0.000451
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "22",
+        "x_coord": "0.000225",
+        "y_coord": "0.000403",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000225,
+          0.000403
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "23",
+        "x_coord": "0.000010",
+        "y_coord": "0.000357",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1e-05,
+          0.000357
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "24",
+        "x_coord": "0.000338",
+        "y_coord": "0.000334",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000338,
+          0.000334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "25",
+        "x_coord": "0.000097",
+        "y_coord": "0.000323",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.7e-05,
+          0.000323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "26",
+        "x_coord": "0.000096",
+        "y_coord": "0.000233",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.6e-05,
+          0.000233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "27",
+        "x_coord": "0.000040",
+        "y_coord": "0.000233",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4e-05,
+          0.000233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "28",
+        "x_coord": "0.000164",
+        "y_coord": "0.000221",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000164,
+          0.000221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "29",
+        "x_coord": "0.000025",
+        "y_coord": "0.000009",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5e-05,
+          9e-06
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "30",
+        "x_coord": "0.000062",
+        "y_coord": "0.000769",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.2e-05,
+          0.000769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "31",
+        "x_coord": "0.000348",
+        "y_coord": "0.000487",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000348,
+          0.000487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "32",
+        "x_coord": "0.000320",
+        "y_coord": "0.000550",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00032,
+          0.00055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "33",
+        "x_coord": "0.000025",
+        "y_coord": "0.000498",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.5e-05,
+          0.000498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "34",
+        "x_coord": "0.000245",
+        "y_coord": "0.000795",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000245,
+          0.000795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "35",
+        "x_coord": "0.000000",
+        "y_coord": "0.000651",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.0,
+          0.000651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "36",
+        "x_coord": "0.000007",
+        "y_coord": "0.000070",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7e-06,
+          7e-05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "37",
+        "x_coord": "0.000034",
+        "y_coord": "0.000708",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.4e-05,
+          0.000708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "38",
+        "x_coord": "0.000666",
+        "y_coord": "0.000789",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000666,
+          0.000789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "39",
+        "x_coord": "0.000559",
+        "y_coord": "0.000627",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000559,
+          0.000627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "40",
+        "x_coord": "0.000287",
+        "y_coord": "0.000716",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000287,
+          0.000716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "41",
+        "x_coord": "0.000353",
+        "y_coord": "0.000360",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000353,
+          0.00036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "42",
+        "x_coord": "0.000012",
+        "y_coord": "0.000676",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.2e-05,
+          0.000676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "43",
+        "x_coord": "0.000322",
+        "y_coord": "0.000440",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000322,
+          0.00044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "44",
+        "x_coord": "0.000103",
+        "y_coord": "0.000152",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000103,
+          0.000152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "45",
+        "x_coord": "0.000014",
+        "y_coord": "0.000792",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.4e-05,
+          0.000792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "46",
+        "x_coord": "0.000413",
+        "y_coord": "0.000312",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000413,
+          0.000312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "47",
+        "x_coord": "0.000126",
+        "y_coord": "0.000768",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000126,
+          0.000768
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "48",
+        "x_coord": "0.000004",
+        "y_coord": "0.000458",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4e-06,
+          0.000458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "49",
+        "x_coord": "0.000298",
+        "y_coord": "0.000313",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000298,
+          0.000313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "50",
+        "x_coord": "0.000140",
+        "y_coord": "0.000215",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00014,
+          0.000215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "51",
+        "x_coord": "0.000012",
+        "y_coord": "0.000174",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.2e-05,
+          0.000174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "52",
+        "x_coord": "0.000587",
+        "y_coord": "0.000789",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000587,
+          0.000789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "53",
+        "x_coord": "0.000549",
+        "y_coord": "0.000781",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000549,
+          0.000781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "54",
+        "x_coord": "0.000182",
+        "y_coord": "0.000749",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000182,
+          0.000749
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "55",
+        "x_coord": "0.000594",
+        "y_coord": "0.000653",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000594,
+          0.000653
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "56",
+        "x_coord": "0.000152",
+        "y_coord": "0.000600",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000152,
+          0.0006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "57",
+        "x_coord": "0.000258",
+        "y_coord": "0.000590",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000258,
+          0.00059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "58",
+        "x_coord": "0.000330",
+        "y_coord": "0.000416",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00033,
+          0.000416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "59",
+        "x_coord": "0.000114",
+        "y_coord": "0.000390",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000114,
+          0.00039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "60",
+        "x_coord": "0.000094",
+        "y_coord": "0.000287",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.4e-05,
+          0.000287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "61",
+        "x_coord": "0.000515",
+        "y_coord": "0.000204",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000515,
+          0.000204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "62",
+        "x_coord": "0.000521",
+        "y_coord": "0.000180",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000521,
+          0.00018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "63",
+        "x_coord": "0.000529",
+        "y_coord": "0.000147",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000529,
+          0.000147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "64",
+        "x_coord": "0.000530",
+        "y_coord": "0.000122",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.00053,
+          0.000122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "65",
+        "x_coord": "0.000538",
+        "y_coord": "0.000086",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000538,
+          8.6e-05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "66",
+        "x_coord": "0.000542",
+        "y_coord": "0.000056",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000542,
+          5.6e-05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "67",
+        "x_coord": "0.000547",
+        "y_coord": "0.000026",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000547,
+          2.6e-05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "68",
+        "x_coord": "0.000144",
+        "y_coord": "0.000013",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000144,
+          1.3e-05
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "69",
+        "x_coord": "0.000494",
+        "y_coord": "0.000237",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000494,
+          0.000237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "70",
+        "x_coord": "0.000381",
+        "y_coord": "0.000340",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000381,
+          0.00034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "71",
+        "x_coord": "0.000442",
+        "y_coord": "0.000285",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000442,
+          0.000285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "72",
+        "x_coord": "0.000467",
+        "y_coord": "0.000263",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000467,
+          0.000263
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "0",
+        "from_node_id": "28",
+        "to_node_id": "50",
+        "length": "24.74",
+        "geometry": "LINESTRING (0.000164 0.000221, 0.000140 0.000215)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000164,
+            0.000221
+          ],
+          [
+            0.00014,
+            0.000215
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "1",
+        "from_node_id": "61",
+        "to_node_id": "62",
+        "length": "24.74",
+        "geometry": "LINESTRING (0.000515 0.000204, 0.000521 0.000180)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000515,
+            0.000204
+          ],
+          [
+            0.000521,
+            0.00018
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "2",
+        "from_node_id": "63",
+        "to_node_id": "64",
+        "length": "25.02",
+        "geometry": "LINESTRING (0.000529 0.000147, 0.000530 0.000122)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000529,
+            0.000147
+          ],
+          [
+            0.00053,
+            0.000122
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "3",
+        "from_node_id": "43",
+        "to_node_id": "58",
+        "length": "25.3",
+        "geometry": "LINESTRING (0.000322 0.000440, 0.000330 0.000416)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000322,
+            0.00044
+          ],
+          [
+            0.00033,
+            0.000416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "4",
+        "from_node_id": "35",
+        "to_node_id": "42",
+        "length": "27.73",
+        "geometry": "LINESTRING (0.000000 0.000651, 0.000012 0.000676)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.0,
+            0.000651
+          ],
+          [
+            1.2e-05,
+            0.000676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "5",
+        "from_node_id": "24",
+        "to_node_id": "41",
+        "length": "30.02",
+        "geometry": "LINESTRING (0.000338 0.000334, 0.000353 0.000360)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000338,
+            0.000334
+          ],
+          [
+            0.000353,
+            0.00036
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "6",
+        "from_node_id": "2",
+        "to_node_id": "26",
+        "length": "30.07",
+        "geometry": "LINESTRING (0.000094 0.000203, 0.000096 0.000233)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.4e-05,
+            0.000203
+          ],
+          [
+            9.6e-05,
+            0.000233
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "7",
+        "from_node_id": "7",
+        "to_node_id": "54",
+        "length": "30.15",
+        "geometry": "LINESTRING (0.000185 0.000779, 0.000182 0.000749)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000185,
+            0.000779
+          ],
+          [
+            0.000182,
+            0.000749
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "8",
+        "from_node_id": "65",
+        "to_node_id": "66",
+        "length": "30.27",
+        "geometry": "LINESTRING (0.000538 0.000086, 0.000542 0.000056)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000538,
+            8.6e-05
+          ],
+          [
+            0.000542,
+            5.6e-05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "9",
+        "from_node_id": "9",
+        "to_node_id": "56",
+        "length": "30.36",
+        "geometry": "LINESTRING (0.000161 0.000629, 0.000152 0.000600)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000161,
+            0.000629
+          ],
+          [
+            0.000152,
+            0.0006
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "10",
+        "from_node_id": "66",
+        "to_node_id": "67",
+        "length": "30.41",
+        "geometry": "LINESTRING (0.000542 0.000056, 0.000547 0.000026)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000542,
+            5.6e-05
+          ],
+          [
+            0.000547,
+            2.6e-05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "11",
+        "from_node_id": "16",
+        "to_node_id": "33",
+        "length": "30.81",
+        "geometry": "LINESTRING (0.000050 0.000516, 0.000025 0.000498)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5e-05,
+            0.000516
+          ],
+          [
+            2.5e-05,
+            0.000498
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "12",
+        "from_node_id": "11",
+        "to_node_id": "59",
+        "length": "31.14",
+        "geometry": "LINESTRING (0.000117 0.000421, 0.000114 0.000390)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000117,
+            0.000421
+          ],
+          [
+            0.000114,
+            0.00039
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "13",
+        "from_node_id": "71",
+        "to_node_id": "72",
+        "length": "33.3",
+        "geometry": "LINESTRING (0.000442 0.000285, 0.000467 0.000263)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000442,
+            0.000285
+          ],
+          [
+            0.000467,
+            0.000263
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "14",
+        "from_node_id": "62",
+        "to_node_id": "63",
+        "length": "33.96",
+        "geometry": "LINESTRING (0.000521 0.000180, 0.000529 0.000147)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000521,
+            0.00018
+          ],
+          [
+            0.000529,
+            0.000147
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "15",
+        "from_node_id": "0",
+        "to_node_id": "57",
+        "length": "34.01",
+        "geometry": "LINESTRING (0.000272 0.000559, 0.000258 0.000590)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000272,
+            0.000559
+          ],
+          [
+            0.000258,
+            0.00059
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "16",
+        "from_node_id": "41",
+        "to_node_id": "70",
+        "length": "34.41",
+        "geometry": "LINESTRING (0.000353 0.000360, 0.000381 0.000340)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000353,
+            0.00036
+          ],
+          [
+            0.000381,
+            0.00034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "17",
+        "from_node_id": "10",
+        "to_node_id": "43",
+        "length": "36.06",
+        "geometry": "LINESTRING (0.000310 0.000474, 0.000322 0.000440)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.00031,
+            0.000474
+          ],
+          [
+            0.000322,
+            0.00044
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "18",
+        "from_node_id": "25",
+        "to_node_id": "60",
+        "length": "36.12",
+        "geometry": "LINESTRING (0.000097 0.000323, 0.000094 0.000287)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.7e-05,
+            0.000323
+          ],
+          [
+            9.4e-05,
+            0.000287
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "19",
+        "from_node_id": "64",
+        "to_node_id": "65",
+        "length": "36.88",
+        "geometry": "LINESTRING (0.000530 0.000122, 0.000538 0.000086)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.00053,
+            0.000122
+          ],
+          [
+            0.000538,
+            8.6e-05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "20",
+        "from_node_id": "69",
+        "to_node_id": "72",
+        "length": "37.48",
+        "geometry": "LINESTRING (0.000494 0.000237, 0.000467 0.000263)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000494,
+            0.000237
+          ],
+          [
+            0.000467,
+            0.000263
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "21",
+        "from_node_id": "3",
+        "to_node_id": "4",
+        "length": "38.05",
+        "geometry": "LINESTRING (0.000283 0.000654, 0.000245 0.000652)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000283,
+            0.000654
+          ],
+          [
+            0.000245,
+            0.000652
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "22",
+        "from_node_id": "37",
+        "to_node_id": "42",
+        "length": "38.83",
+        "geometry": "LINESTRING (0.000034 0.000708, 0.000012 0.000676)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            3.4e-05,
+            0.000708
+          ],
+          [
+            1.2e-05,
+            0.000676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "23",
+        "from_node_id": "61",
+        "to_node_id": "69",
+        "length": "39.12",
+        "geometry": "LINESTRING (0.000515 0.000204, 0.000494 0.000237)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000515,
+            0.000204
+          ],
+          [
+            0.000494,
+            0.000237
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "24",
+        "from_node_id": "46",
+        "to_node_id": "71",
+        "length": "39.62",
+        "geometry": "LINESTRING (0.000413 0.000312, 0.000442 0.000285)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000413,
+            0.000312
+          ],
+          [
+            0.000442,
+            0.000285
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "25",
+        "from_node_id": "10",
+        "to_node_id": "31",
+        "length": "40.16",
+        "geometry": "LINESTRING (0.000310 0.000474, 0.000348 0.000487)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.00031,
+            0.000474
+          ],
+          [
+            0.000348,
+            0.000487
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "26",
+        "from_node_id": "46",
+        "to_node_id": "70",
+        "length": "42.52",
+        "geometry": "LINESTRING (0.000413 0.000312, 0.000381 0.000340)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000413,
+            0.000312
+          ],
+          [
+            0.000381,
+            0.00034
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "27",
+        "from_node_id": "9",
+        "to_node_id": "15",
+        "length": "44.72",
+        "geometry": "LINESTRING (0.000161 0.000629, 0.000205 0.000621)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000161,
+            0.000629
+          ],
+          [
+            0.000205,
+            0.000621
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "28",
+        "from_node_id": "24",
+        "to_node_id": "49",
+        "length": "45.18",
+        "geometry": "LINESTRING (0.000338 0.000334, 0.000298 0.000313)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000338,
+            0.000334
+          ],
+          [
+            0.000298,
+            0.000313
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "29",
+        "from_node_id": "2",
+        "to_node_id": "50",
+        "length": "47.54",
+        "geometry": "LINESTRING (0.000094 0.000203, 0.000140 0.000215)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.4e-05,
+            0.000203
+          ],
+          [
+            0.00014,
+            0.000215
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "30",
+        "from_node_id": "30",
+        "to_node_id": "45",
+        "length": "53.23",
+        "geometry": "LINESTRING (0.000062 0.000769, 0.000014 0.000792)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.2e-05,
+            0.000769
+          ],
+          [
+            1.4e-05,
+            0.000792
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "31",
+        "from_node_id": "8",
+        "to_node_id": "9",
+        "length": "53.24",
+        "geometry": "LINESTRING (0.000166 0.000682, 0.000161 0.000629)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000166,
+            0.000682
+          ],
+          [
+            0.000161,
+            0.000629
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "32",
+        "from_node_id": "1",
+        "to_node_id": "21",
+        "length": "53.6",
+        "geometry": "LINESTRING (0.000186 0.000398, 0.000194 0.000451)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000186,
+            0.000398
+          ],
+          [
+            0.000194,
+            0.000451
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "33",
+        "from_node_id": "26",
+        "to_node_id": "60",
+        "length": "54.04",
+        "geometry": "LINESTRING (0.000096 0.000233, 0.000094 0.000287)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.6e-05,
+            0.000233
+          ],
+          [
+            9.4e-05,
+            0.000287
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "34",
+        "from_node_id": "26",
+        "to_node_id": "27",
+        "length": "56.0",
+        "geometry": "LINESTRING (0.000096 0.000233, 0.000040 0.000233)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.6e-05,
+            0.000233
+          ],
+          [
+            4e-05,
+            0.000233
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "35",
+        "from_node_id": "6",
+        "to_node_id": "25",
+        "length": "59.77",
+        "geometry": "LINESTRING (0.000040 0.000341, 0.000097 0.000323)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            4e-05,
+            0.000341
+          ],
+          [
+            9.7e-05,
+            0.000323
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "36",
+        "from_node_id": "7",
+        "to_node_id": "47",
+        "length": "60.02",
+        "geometry": "LINESTRING (0.000185 0.000779, 0.000126 0.000768)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000185,
+            0.000779
+          ],
+          [
+            0.000126,
+            0.000768
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "37",
+        "from_node_id": "41",
+        "to_node_id": "58",
+        "length": "60.54",
+        "geometry": "LINESTRING (0.000353 0.000360, 0.000330 0.000416)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000353,
+            0.00036
+          ],
+          [
+            0.00033,
+            0.000416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "38",
+        "from_node_id": "7",
+        "to_node_id": "34",
+        "length": "62.1",
+        "geometry": "LINESTRING (0.000185 0.000779, 0.000245 0.000795)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000185,
+            0.000779
+          ],
+          [
+            0.000245,
+            0.000795
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "39",
+        "from_node_id": "3",
+        "to_node_id": "40",
+        "length": "62.13",
+        "geometry": "LINESTRING (0.000283 0.000654, 0.000287 0.000716)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000283,
+            0.000654
+          ],
+          [
+            0.000287,
+            0.000716
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "40",
+        "from_node_id": "4",
+        "to_node_id": "57",
+        "length": "63.35",
+        "geometry": "LINESTRING (0.000245 0.000652, 0.000258 0.000590)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000245,
+            0.000652
+          ],
+          [
+            0.000258,
+            0.00059
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "41",
+        "from_node_id": "29",
+        "to_node_id": "36",
+        "length": "63.6",
+        "geometry": "LINESTRING (0.000025 0.000009, 0.000007 0.000070)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            2.5e-05,
+            9e-06
+          ],
+          [
+            7e-06,
+            7e-05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "42",
+        "from_node_id": "30",
+        "to_node_id": "37",
+        "length": "67.12",
+        "geometry": "LINESTRING (0.000062 0.000769, 0.000034 0.000708)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.2e-05,
+            0.000769
+          ],
+          [
+            3.4e-05,
+            0.000708
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "43",
+        "from_node_id": "8",
+        "to_node_id": "54",
+        "length": "68.88",
+        "geometry": "LINESTRING (0.000166 0.000682, 0.000182 0.000749)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000166,
+            0.000682
+          ],
+          [
+            0.000182,
+            0.000749
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "44",
+        "from_node_id": "25",
+        "to_node_id": "59",
+        "length": "69.12",
+        "geometry": "LINESTRING (0.000097 0.000323, 0.000114 0.000390)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.7e-05,
+            0.000323
+          ],
+          [
+            0.000114,
+            0.00039
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "45",
+        "from_node_id": "41",
+        "to_node_id": "49",
+        "length": "72.35",
+        "geometry": "LINESTRING (0.000353 0.000360, 0.000298 0.000313)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000353,
+            0.00036
+          ],
+          [
+            0.000298,
+            0.000313
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "46",
+        "from_node_id": "1",
+        "to_node_id": "11",
+        "length": "72.73",
+        "geometry": "LINESTRING (0.000186 0.000398, 0.000117 0.000421)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000186,
+            0.000398
+          ],
+          [
+            0.000117,
+            0.000421
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "47",
+        "from_node_id": "11",
+        "to_node_id": "18",
+        "length": "82.57",
+        "geometry": "LINESTRING (0.000117 0.000421, 0.000133 0.000502)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000117,
+            0.000421
+          ],
+          [
+            0.000133,
+            0.000502
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "48",
+        "from_node_id": "16",
+        "to_node_id": "18",
+        "length": "84.17",
+        "geometry": "LINESTRING (0.000050 0.000516, 0.000133 0.000502)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            5e-05,
+            0.000516
+          ],
+          [
+            0.000133,
+            0.000502
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "49",
+        "from_node_id": "2",
+        "to_node_id": "51",
+        "length": "86.98",
+        "geometry": "LINESTRING (0.000094 0.000203, 0.000012 0.000174)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            9.4e-05,
+            0.000203
+          ],
+          [
+            1.2e-05,
+            0.000174
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "50",
+        "from_node_id": "0",
+        "to_node_id": "10",
+        "length": "93.11",
+        "geometry": "LINESTRING (0.000272 0.000559, 0.000310 0.000474)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000272,
+            0.000559
+          ],
+          [
+            0.00031,
+            0.000474
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "51",
+        "from_node_id": "18",
+        "to_node_id": "56",
+        "length": "99.82",
+        "geometry": "LINESTRING (0.000133 0.000502, 0.000152 0.000600)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000133,
+            0.000502
+          ],
+          [
+            0.000152,
+            0.0006
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "52",
+        "from_node_id": "30",
+        "to_node_id": "42",
+        "length": "105.59",
+        "geometry": "LINESTRING (0.000062 0.000769, 0.000012 0.000676)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            6.2e-05,
+            0.000769
+          ],
+          [
+            1.2e-05,
+            0.000676
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "53",
+        "from_node_id": "34",
+        "to_node_id": "47",
+        "length": "122.02",
+        "geometry": "LINESTRING (0.000245 0.000795, 0.000126 0.000768)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000245,
+            0.000795
+          ],
+          [
+            0.000126,
+            0.000768
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "54",
+        "from_node_id": "0",
+        "to_node_id": "43",
+        "length": "129.08",
+        "geometry": "LINESTRING (0.000272 0.000559, 0.000322 0.000440)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000272,
+            0.000559
+          ],
+          [
+            0.000322,
+            0.00044
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "55",
+        "from_node_id": "50",
+        "to_node_id": "51",
+        "length": "134.41",
+        "geometry": "LINESTRING (0.000140 0.000215, 0.000012 0.000174)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.00014,
+            0.000215
+          ],
+          [
+            1.2e-05,
+            0.000174
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "56",
+        "from_node_id": "8",
+        "to_node_id": "37",
+        "length": "134.54",
+        "geometry": "LINESTRING (0.000166 0.000682, 0.000034 0.000708)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000166,
+            0.000682
+          ],
+          [
+            3.4e-05,
+            0.000708
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "57",
+        "from_node_id": "52",
+        "to_node_id": "55",
+        "length": "136.18",
+        "geometry": "LINESTRING (0.000587 0.000789, 0.000594 0.000653)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000587,
+            0.000789
+          ],
+          [
+            0.000594,
+            0.000653
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "58",
+        "from_node_id": "4",
+        "to_node_id": "34",
+        "length": "143.0",
+        "geometry": "LINESTRING (0.000245 0.000652, 0.000245 0.000795)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000245,
+            0.000652
+          ],
+          [
+            0.000245,
+            0.000795
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "59",
+        "from_node_id": "44",
+        "to_node_id": "68",
+        "length": "144.92",
+        "geometry": "LINESTRING (0.000103 0.000152, 0.000144 0.000013)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000103,
+            0.000152
+          ],
+          [
+            0.000144,
+            1.3e-05
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "60",
+        "from_node_id": "19",
+        "to_node_id": "31",
+        "length": "145.06",
+        "geometry": "LINESTRING (0.000493 0.000483, 0.000348 0.000487)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000493,
+            0.000483
+          ],
+          [
+            0.000348,
+            0.000487
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "61",
+        "from_node_id": "54",
+        "to_node_id": "56",
+        "length": "151.99",
+        "geometry": "LINESTRING (0.000182 0.000749, 0.000152 0.000600)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000182,
+            0.000749
+          ],
+          [
+            0.000152,
+            0.0006
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "62",
+        "from_node_id": "39",
+        "to_node_id": "53",
+        "length": "154.32",
+        "geometry": "LINESTRING (0.000559 0.000627, 0.000549 0.000781)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000559,
+            0.000627
+          ],
+          [
+            0.000549,
+            0.000781
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "63",
+        "from_node_id": "5",
+        "to_node_id": "38",
+        "length": "161.79",
+        "geometry": "LINESTRING (0.000650 0.000628, 0.000666 0.000789)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.00065,
+            0.000628
+          ],
+          [
+            0.000666,
+            0.000789
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "64",
+        "from_node_id": "57",
+        "to_node_id": "58",
+        "length": "188.31",
+        "geometry": "LINESTRING (0.000258 0.000590, 0.000330 0.000416)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000258,
+            0.00059
+          ],
+          [
+            0.00033,
+            0.000416
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "65",
+        "from_node_id": "14",
+        "to_node_id": "16",
+        "length": "192.68",
+        "geometry": "LINESTRING (0.000082 0.000706, 0.000050 0.000516)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.2e-05,
+            0.000706
+          ],
+          [
+            5e-05,
+            0.000516
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "66",
+        "from_node_id": "56",
+        "to_node_id": "59",
+        "length": "213.41",
+        "geometry": "LINESTRING (0.000152 0.000600, 0.000114 0.000390)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000152,
+            0.0006
+          ],
+          [
+            0.000114,
+            0.00039
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "67",
+        "from_node_id": "18",
+        "to_node_id": "60",
+        "length": "218.51",
+        "geometry": "LINESTRING (0.000133 0.000502, 0.000094 0.000287)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000133,
+            0.000502
+          ],
+          [
+            9.4e-05,
+            0.000287
+          ]
+        ]
+      }
+    }
+  ]
+}

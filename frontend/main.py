@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any, Dict, Optional
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, StreamingResponse
+from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
@@ -495,6 +495,78 @@ def _update_task(task_id: str, **changes: Any) -> None:
         task.update(changes)
 
 
+def _friendly_task_error(task_type: str, exc: Exception, trace_text: str = "") -> str:
+    raw_message = str(exc).strip()
+    lower_message = raw_message.lower()
+    lower_trace = trace_text.lower()
+
+    task_label_map = {
+        "simple-network": "简单路网生成",
+        "osm-network": "OSM 路网抓取",
+        "handdrawn": "手绘图识别",
+        "satellite": "卫星图提取",
+        "agent-chat": "对话任务",
+    }
+    task_label = task_label_map.get(task_type, "任务")
+
+    if task_type == "simple-network":
+        if "invalid literal for int()" in lower_message or "could not convert string to float" in lower_message:
+            return "简单路网生成失败：输入参数格式不正确，请检查行数、列数和精度是否为有效数字。"
+        if "division by zero" in lower_message:
+            return "简单路网生成失败：参数计算出现除零错误，请检查输入的行列或精度配置。"
+
+    if task_type == "osm-network":
+        if "timeout" in lower_message or "timed out" in lower_message:
+            return "OSM 路网抓取失败：请求地图或地理编码服务超时，请稍后重试，或缩小抓取半径后再试。"
+        if "connection" in lower_message or "urlopen error" in lower_message or "proxy" in lower_message:
+            return "OSM 路网抓取失败：网络连接异常，暂时无法访问地理编码或地图服务，请检查网络后重试。"
+        if "geocode" in lower_message or "无法解析地址经纬度" in raw_message:
+            return "OSM 路网抓取失败：无法解析该地点，请输入更完整的地址或更明确的地标名称。"
+        if "graph_from_point" in lower_trace or "osmnx" in lower_trace:
+            return "OSM 路网抓取失败：地图服务返回异常，可能是地点范围内无可用道路数据，或远程服务暂时不可用。"
+
+    if task_type in {"handdrawn", "satellite", "agent-chat"}:
+        if "cannot identify image file" in lower_message:
+            return f"{task_label}失败：上传的图片无法识别，请确认文件未损坏且格式受支持后重试。"
+        if "!_src.empty" in lower_message or "imread" in lower_trace or "cvtcolor" in lower_trace:
+            return f"{task_label}失败：图片读取失败，可能是文件损坏、格式不兼容或上传内容不是有效图片。"
+        if (
+            "int() argument must be a string" in lower_message
+            and "nonetype" in lower_message
+        ) or "cornerdetection.py" in lower_trace or "goodfeaturestotrack" in lower_trace:
+            if task_type == "handdrawn":
+                return "手绘图识别失败：未能从图片中识别出清晰的道路角点，请上传线条更清楚、背景更干净的手绘图后重试。"
+            return "卫星图提取失败：未能从上传图片中识别出可用的道路角点，请更换更清晰的卫星图，或使用道路更明显、对比度更高的图片后重试。"
+        if "best_image" in lower_trace and "none" in lower_message:
+            return f"{task_label}失败：当前图片未能成功重建出有效路网，请尝试更清晰的图片或更明显的道路结构。"
+
+    if "no such file or directory" in lower_message:
+        return f"{task_label}失败：所需输入文件不存在，可能是上传文件未保存成功或中间结果路径无效。请重新上传后再试。"
+
+    if "permission denied" in lower_message:
+        return f"{task_label}失败：程序没有足够权限读写相关文件，请检查文件占用或目录权限后重试。"
+
+    if "memoryerror" in lower_message or "out of memory" in lower_message:
+        return f"{task_label}失败：处理过程中内存不足，请尝试使用更小的图片、缩小抓取范围，或关闭部分占用内存的程序后重试。"
+
+    if "indexerror" in lower_message or "list index out of range" in lower_message:
+        return f"{task_label}失败：处理中间结果时缺少预期数据，可能是输入内容不符合当前工具要求。"
+
+    if raw_message:
+        if raw_message.startswith("错误：") or raw_message.startswith("输入格式错误"):
+            return raw_message
+        return f"{task_label}失败：{raw_message}"
+
+    return f"{task_label}失败，请稍后重试。"
+
+
+def _raise_if_tool_returned_error(text: Any) -> str:
+    message = str(text or "").strip()
+    if message.startswith("错误：") or message.startswith("输入格式错误"):
+        raise ValueError(message)
+    return message
+
+
 def _snapshot_task(task_id: str) -> Dict[str, Any]:
     with TASK_LOCK:
         task = TASKS.get(task_id)
@@ -517,6 +589,28 @@ def _snapshot_task(task_id: str) -> Dict[str, Any]:
             "stage_history": list(task.get("stage_history", [])),
             "stages": list(task.get("stages", [])),
             "log_version": task["log_version"],
+        }
+
+
+def _snapshot_task_logs(task_id: str) -> Dict[str, Any]:
+    with TASK_LOCK:
+        task = TASKS.get(task_id)
+        if task is None:
+            raise HTTPException(status_code=404, detail="Task not found")
+        logs = list(task.get("logs", []))
+        return {
+            "task_id": task["task_id"],
+            "task_type": task["task_type"],
+            "display_title": task.get("display_title", task["task_type"]),
+            "status": task["status"],
+            "current_stage": task.get("current_stage"),
+            "error": task.get("error"),
+            "created_at": task.get("created_at"),
+            "started_at": task.get("started_at"),
+            "ended_at": task.get("ended_at"),
+            "log_version": task.get("log_version", 0),
+            "logs": logs,
+            "log_text": "\n".join(logs),
         }
 
 
@@ -548,6 +642,7 @@ def _execute_task(task_id: str) -> None:
                 text = tool.inference(f"{rows},{cols}")
             else:
                 text = tool.inference(f"{rows},{cols},{precision_m}")
+            text = _raise_if_tool_returned_error(text)
             result = {"message": text}
             _set_stage(task_id, "整理输出文件", 90)
             _assert_not_canceled(task_id)
@@ -564,6 +659,7 @@ def _execute_task(task_id: str) -> None:
             _set_stage(task_id, "抓取并转换路网", 60)
             _assert_not_canceled(task_id)
             text = RoadNetworkGenerator.generate_road_network_map(f"{place},{radius_m}")
+            text = _raise_if_tool_returned_error(text)
             result = {"message": text}
             _set_stage(task_id, "整理输出文件", 90)
             _assert_not_canceled(task_id)
@@ -688,13 +784,18 @@ def _execute_task(task_id: str) -> None:
             _update_task(task_id, status="canceled", error=None)
             _set_stage(task_id, "任务已取消")
             return
+        trace_text = traceback.format_exc()
+        friendly_error = _friendly_task_error(task_type, exc, trace_text)
+        print(f"[Task Failed] {task_id} | {task_type} | {friendly_error}", file=sys.stderr)
+        print(trace_text, file=sys.stderr)
         _update_task(
             task_id,
             status="failed",
-            error=f"{exc}\n{traceback.format_exc()}",
+            error=friendly_error,
         )
         _set_stage(task_id, "任务失败")
-        _append_log(task_id, f"任务失败: {exc}")
+        _append_log(task_id, f"任务失败: {friendly_error}")
+        _append_log(task_id, f"异常详情:\n{trace_text}")
     finally:
         with TASK_LOCK:
             task = TASKS.get(task_id)
@@ -917,6 +1018,31 @@ async def api_chat(
 @app.get("/api/tasks/{task_id}")
 def api_get_task(task_id: str) -> JSONResponse:
     return JSONResponse({"ok": True, "task": _snapshot_task(task_id)})
+
+
+@app.get("/api/tasks/{task_id}/logs")
+def api_get_task_logs(task_id: str) -> JSONResponse:
+    return JSONResponse({"ok": True, "task": _snapshot_task_logs(task_id)})
+
+
+@app.get("/api/tasks/{task_id}/logs.txt", response_class=PlainTextResponse)
+def api_get_task_logs_text(task_id: str) -> PlainTextResponse:
+    task = _snapshot_task_logs(task_id)
+    header_lines = [
+        f"task_id: {task['task_id']}",
+        f"task_type: {task['task_type']}",
+        f"display_title: {task['display_title']}",
+        f"status: {task['status']}",
+        f"current_stage: {task.get('current_stage') or '-'}",
+        f"created_at: {task.get('created_at') or '-'}",
+        f"started_at: {task.get('started_at') or '-'}",
+        f"ended_at: {task.get('ended_at') or '-'}",
+        f"friendly_error: {task.get('error') or '-'}",
+        "",
+        "===== logs =====",
+    ]
+    log_text = task.get("log_text") or "(no logs)"
+    return PlainTextResponse("\n".join(header_lines) + "\n" + log_text)
 
 
 @app.get("/api/tasks")

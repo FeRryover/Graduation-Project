@@ -15,10 +15,15 @@ class image_recognition:
 
     @prompts(name='Identify Hand Drawn Image',
              description="""
-             Recognize a hand-drawn road map image and provide a compressed GMNS file with road node details, along with a visual representation of the recognized road network.
+             Recognize a hand-drawn road map image and provide a compressed GMNS file with road node details, a GeoJSON network file, and a visual representation of the recognized road network.
              The input should be a path to the image which needs to be processed.
-             The output is a path to the generated zip file containing gmns-style files, and a path to the visual representation of the recognized road network.
+             The output is a path to the generated zip file containing gmns-style files, a path to the generated GeoJSON file, and a path to the visual representation of the recognized road network.
              """)
     def inference(self, file: str) -> str:
-        GMNS_path, best_img_name = recognition(file)
-        return f'The path to the generated zipped gmns file is: `{GMNS_path}`. The path to the visual representation of the recognized road network is: `{best_img_name}`. Process finished.'
+        gmns_path, best_img_name, geojson_path = recognition(file)
+        return (
+            f'The path to the generated zipped gmns file is: `{gmns_path}`. '
+            f'The path to the generated GeoJSON network file is: `{geojson_path}`. '
+            f'The path to the visual representation of the recognized road network is: `{best_img_name}`. '
+            'Process finished.'
+        )

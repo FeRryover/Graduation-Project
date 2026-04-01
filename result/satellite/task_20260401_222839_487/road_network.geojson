@@ -1,0 +1,68 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "coordinate_mode": "geo",
+    "source_files": {
+      "nodes": "result\\satellite\\task_20260401_222839_487\\gmns\\corners.csv",
+      "links": "result\\satellite\\task_20260401_222839_487\\gmns\\link.csv"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "0",
+        "x_coord": "0.000286",
+        "y_coord": "0.000436",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000286,
+          0.000436
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "node_id": "1",
+        "x_coord": "0.000309",
+        "y_coord": "0.000345",
+        "feature_type": "node"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.000309,
+          0.000345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "link_id": "0",
+        "from_node_id": "0",
+        "to_node_id": "1",
+        "length": "93.86",
+        "geometry": "LINESTRING (0.000286 0.000436, 0.000309 0.000345)",
+        "feature_type": "link"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            0.000286,
+            0.000436
+          ],
+          [
+            0.000309,
+            0.000345
+          ]
+        ]
+      }
+    }
+  ]
+}

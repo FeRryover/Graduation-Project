@@ -14,3 +14,10 @@ gray_image.jpg：灰度化处理图。
 
 
 temp_result.jpg：临时中间结果图。
+
+
+若任务出现了失败，有两个开发者日志的接口可以查看错误信息：
+    第一个：用法很直接，在浏览器打开：
+    http://127.0.0.1:8000/api/tasks/你的task_id/logs.txt
+    第二个：http://127.0.0.1:8000/api/tasks/你的task_id/logs
+    第三个：加了终端输出

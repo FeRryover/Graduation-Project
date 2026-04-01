@@ -58,6 +58,57 @@ function formatBytes(size) {
   return `${(size / (1024 * 1024)).toFixed(2)} MB`;
 }
 
+function formatUploadStatusText(prefix, name, size) {
+  const sizeText = Number.isFinite(size) ? `（${formatBytes(size)}）` : '';
+  return `${prefix}${name}${sizeText}`;
+}
+
+function setUploadStatusText(status, text, extraClass = '') {
+  status.innerHTML = '';
+  status.textContent = text;
+  status.classList.toggle('is-sent', extraClass === 'is-sent');
+}
+
+function setUploadStatusLink(status, href, downloadName, text, extraClass = '') {
+  status.innerHTML = '';
+  status.classList.toggle('is-sent', extraClass === 'is-sent');
+
+  const link = document.createElement('a');
+  link.className = 'upload-status-link';
+  link.href = href;
+  link.target = '_blank';
+  link.rel = 'noopener noreferrer';
+  link.download = downloadName;
+  link.textContent = text;
+  status.appendChild(link);
+}
+
+function rememberSentUpload(input, file) {
+  if (!input || !file) {
+    return;
+  }
+  const oldSentUrl = input.dataset.lastSentUrl;
+  if (oldSentUrl) {
+    URL.revokeObjectURL(oldSentUrl);
+  }
+  input.dataset.lastSentName = file.name || '';
+  input.dataset.lastSentSize = Number.isFinite(file.size) ? String(file.size) : '';
+  input.dataset.lastSentUrl = URL.createObjectURL(file);
+}
+
+function clearSentUploadMemory(input) {
+  if (!input) {
+    return;
+  }
+  const oldSentUrl = input.dataset.lastSentUrl;
+  if (oldSentUrl) {
+    URL.revokeObjectURL(oldSentUrl);
+  }
+  delete input.dataset.lastSentName;
+  delete input.dataset.lastSentSize;
+  delete input.dataset.lastSentUrl;
+}
+
 function bindUploadStatusHints() {
   const fileInputs = document.querySelectorAll('input[type="file"][name="image_file"]');
   fileInputs.forEach((input) => {
@@ -72,30 +123,34 @@ function bindUploadStatusHints() {
     }
 
     const update = () => {
-      const oldUrl = status.dataset.blobUrl;
-      if (oldUrl) {
-        URL.revokeObjectURL(oldUrl);
-        delete status.dataset.blobUrl;
+      const oldPreviewUrl = status.dataset.previewUrl;
+      if (oldPreviewUrl) {
+        URL.revokeObjectURL(oldPreviewUrl);
+        delete status.dataset.previewUrl;
       }
 
       if (!input.files || input.files.length === 0) {
-        status.textContent = '未选择文件';
+        const lastSentName = input.dataset.lastSentName;
+        const lastSentSize = Number(input.dataset.lastSentSize || '');
+        const lastSentUrl = input.dataset.lastSentUrl;
+        if (lastSentName && lastSentUrl) {
+          setUploadStatusLink(
+            status,
+            lastSentUrl,
+            lastSentName,
+            formatUploadStatusText('刚刚已发送：', lastSentName, lastSentSize),
+            'is-sent',
+          );
+          return;
+        }
+        setUploadStatusText(status, '未选择文件');
         return;
       }
+      clearSentUploadMemory(input);
       const f = input.files[0];
-      const blobUrl = URL.createObjectURL(f);
-      status.dataset.blobUrl = blobUrl;
-      status.innerHTML = '';
-
-      const link = document.createElement('a');
-      link.className = 'upload-status-link';
-      link.href = blobUrl;
-      link.target = '_blank';
-      link.rel = 'noopener noreferrer';
-      link.download = f.name;
-      link.textContent = `已选择：${f.name}（${formatBytes(f.size)}）`;
-
-      status.appendChild(link);
+      const previewUrl = URL.createObjectURL(f);
+      status.dataset.previewUrl = previewUrl;
+      setUploadStatusLink(status, previewUrl, f.name, formatUploadStatusText('已选择：', f.name, f.size));
     };
 
     input.addEventListener('change', update);
@@ -2231,6 +2286,9 @@ if (chatForm) {
       }
 
       appendChatMessage('assistant', data.assistant || '已收到你的请求。');
+      if (hasFile) {
+        rememberSentUpload(chatImage, chatImage.files[0]);
+      }
       chatInput.value = '';
       chatImage.value = '';
       chatImage.dispatchEvent(new Event('change'));
