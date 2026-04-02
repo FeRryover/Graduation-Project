@@ -29,8 +29,8 @@ def predict_road_from_satellite_image(pic_path):
     shutil.copy(pic_path, os.path.join(work_folder, os.path.basename(pic_path)))
 
     # 定义各种参数
-    # 在CPU上跑
-    DEVICE = "cpu"
+    # 自动选择设备：优先使用 CUDA，不可用时回退到 CPU。
+    DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
     # 指定了使用的编码器的名称，这里是 'resnet50'
     # # 编码器通常是一个预训练的神经网络，用于提取图像特征
     ENCODER = "resnet50"
