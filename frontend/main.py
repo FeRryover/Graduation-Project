@@ -13,6 +13,7 @@ import zipfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, Optional
+from PIL import Image
 
 from fastapi import FastAPI, File, Form, HTTPException, Request, UploadFile
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTextResponse, StreamingResponse
@@ -45,6 +46,7 @@ ARTIFACTS: Dict[str, Dict[str, Any]] = {}
 TASK_LOCK = threading.Lock()
 WORKER_STARTED = False
 SERVER_SESSION_ID = uuid.uuid4().hex
+PENDING_CHAT_IMAGE: Optional[Dict[str, str]] = None
 
 MAX_UPLOAD_SIZE = 10 * 1024 * 1024
 ALLOWED_IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".bmp", ".webp", ".tif", ".tiff"}
@@ -76,6 +78,197 @@ def _queue_position(task_id: str) -> int:
 
 def _is_image_file(path: Path) -> bool:
     return path.suffix.lower() in {".png", ".jpg", ".jpeg", ".bmp", ".gif", ".webp", ".tif", ".tiff"}
+
+
+def _image_size(path_like: Optional[str]) -> Optional[tuple[int, int]]:
+    p = _resolve_to_path(path_like or "")
+    if p is None or not p.exists() or not p.is_file():
+        return None
+    try:
+        with Image.open(p) as img:
+            width, height = img.size
+        if width <= 0 or height <= 0:
+            return None
+        return int(width), int(height)
+    except Exception:
+        return None
+
+
+def _build_displayable_input_image(path_like: Optional[str], task_tag: str) -> Optional[str]:
+    p = _resolve_to_path(path_like or "")
+    if p is None or not p.exists() or not p.is_file():
+        return None
+
+    # 浏览器通常无法直接预览 TIFF，这里统一转成 PNG 供前端展示。
+    if p.suffix.lower() in {".png", ".jpg", ".jpeg", ".bmp", ".gif", ".webp"}:
+        return str(p)
+
+    safe_tag = re.sub(r"[^a-zA-Z0-9_-]", "_", task_tag or "input")
+    out_dir = DOWNLOAD_DIR / "input_previews"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_name = f"{safe_tag}_{uuid.uuid4().hex[:10]}.png"
+    out_path = out_dir / out_name
+
+    try:
+        with Image.open(p) as img:
+            img.convert("RGB").save(out_path, format="PNG")
+        return str(out_path)
+    except Exception:
+        return None
+
+
+def _read_geojson_coordinate_mode(geojson_path: Optional[str]) -> Optional[str]:
+    p = _resolve_to_path(geojson_path or "")
+    if p is None or not p.exists() or not p.is_file():
+        return None
+    try:
+        payload = json.loads(p.read_text(encoding="utf-8"))
+        metadata = payload.get("metadata") if isinstance(payload, dict) else None
+        if not isinstance(metadata, dict):
+            return None
+        mode = str(metadata.get("coordinate_mode") or "").strip().lower()
+        if mode in {"geo", "image"}:
+            return mode
+    except Exception:
+        return None
+    return None
+
+
+def _image_mode_bounds_from_geojson(geojson_path: Optional[str]) -> Optional[list[list[float]]]:
+    p = _resolve_to_path(geojson_path or "")
+    if p is None or not p.exists() or not p.is_file():
+        return None
+
+    try:
+        payload = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+
+    xs: list[float] = []
+    ys: list[float] = []
+
+    def collect_coords(geom: Any) -> None:
+        if not isinstance(geom, dict):
+            return
+        gtype = str(geom.get("type") or "")
+        coords = geom.get("coordinates")
+
+        if gtype == "Point" and isinstance(coords, list) and len(coords) >= 2:
+            try:
+                xs.append(float(coords[0]))
+                ys.append(float(coords[1]))
+            except Exception:
+                return
+            return
+
+        if gtype == "LineString" and isinstance(coords, list):
+            for c in coords:
+                if isinstance(c, list) and len(c) >= 2:
+                    try:
+                        xs.append(float(c[0]))
+                        ys.append(float(c[1]))
+                    except Exception:
+                        continue
+            return
+
+        if gtype == "MultiPoint" and isinstance(coords, list):
+            for c in coords:
+                if isinstance(c, list) and len(c) >= 2:
+                    try:
+                        xs.append(float(c[0]))
+                        ys.append(float(c[1]))
+                    except Exception:
+                        continue
+            return
+
+        if gtype == "MultiLineString" and isinstance(coords, list):
+            for line in coords:
+                if not isinstance(line, list):
+                    continue
+                for c in line:
+                    if isinstance(c, list) and len(c) >= 2:
+                        try:
+                            xs.append(float(c[0]))
+                            ys.append(float(c[1]))
+                        except Exception:
+                            continue
+            return
+
+        if gtype == "GeometryCollection" and isinstance(geom.get("geometries"), list):
+            for item in geom.get("geometries"):
+                collect_coords(item)
+
+    if isinstance(payload, dict) and payload.get("type") == "FeatureCollection":
+        for feature in payload.get("features") or []:
+            if isinstance(feature, dict):
+                collect_coords(feature.get("geometry"))
+    elif isinstance(payload, dict) and payload.get("type") == "Feature":
+        collect_coords(payload.get("geometry"))
+    elif isinstance(payload, dict):
+        collect_coords(payload)
+
+    if not xs or not ys:
+        return None
+
+    min_x = min(xs)
+    max_x = max(xs)
+    min_y = min(ys)
+    max_y = max(ys)
+
+    if not all(map(lambda v: isinstance(v, float) and (v == v), [min_x, max_x, min_y, max_y])):
+        return None
+
+    # 图像坐标系下：前端会将路网点做 [lat, lon]=[-y, x] 映射。
+    # 因此背景图边界也需采用同样映射，确保输入图与路网严格重合。
+    south = -max_y
+    north = -min_y
+    west = min_x
+    east = max_x
+    if south == north or west == east:
+        return None
+    return [[south, west], [north, east]]
+
+
+def _build_input_overlay_spec(
+    image_path: Optional[str],
+    display_image_path: Optional[str],
+    geojson_path: Optional[str],
+) -> Optional[Dict[str, Any]]:
+    image_size = _image_size(image_path) or _image_size(display_image_path)
+    coord_mode = _read_geojson_coordinate_mode(geojson_path) or "image"
+
+    if not display_image_path:
+        return None
+
+    overlay: Dict[str, Any] = {
+        "image_path": display_image_path,
+        "coordinate_mode": coord_mode,
+        "image_size": list(image_size) if image_size else None,
+    }
+
+    if coord_mode == "image":
+        geo_bounds = _image_mode_bounds_from_geojson(geojson_path)
+        if geo_bounds:
+            overlay["bounds"] = geo_bounds
+        elif image_size:
+            width, height = image_size
+            scale = 1_000_000.0
+            overlay["bounds"] = [
+                [-height / scale, 0.0],
+                [0.0, width / scale],
+            ]
+
+    return overlay
+
+
+def _first_existing_geojson_path_from_text(text: str) -> Optional[str]:
+    for candidate in _extract_paths_from_text(text):
+        p = _resolve_to_path(candidate)
+        if p is None:
+            continue
+        if p.is_file() and p.suffix.lower() == ".geojson":
+            return str(p)
+    return None
 
 
 def _is_cancel_requested(task_id: str) -> bool:
@@ -273,6 +466,7 @@ def _build_artifacts_from_result(result: Dict[str, Any]) -> list[Dict[str, Any]]
     maybe_add(result.get("geojson"), "GeoJSON 文件")
     maybe_add(result.get("preview_image"), "预览图")
     maybe_add(result.get("input_image"), "输入图片")
+    maybe_add(result.get("input_image_display"), "输入图片预览")
 
     text = str(result.get("message") or "")
     for idx, candidate in enumerate(_extract_paths_from_text(text), start=1):
@@ -696,12 +890,16 @@ def _execute_task(task_id: str) -> None:
             _set_stage(task_id, "卫星道路提取", 55)
             _assert_not_canceled(task_id)
             gmns_zip, preview_image, geojson_path = predict_road_from_satellite_image(image_path)
+            display_input_image = _build_displayable_input_image(image_path, f"satellite_{task_id}")
+            overlay_spec = _build_input_overlay_spec(image_path, display_input_image, geojson_path)
             result = {
                 "message": "Satellite extraction finished.",
                 "gmns_zip": gmns_zip,
                 "geojson": geojson_path,
                 "preview_image": preview_image,
                 "input_image": image_path,
+                "input_image_display": display_input_image,
+                "input_overlay": overlay_spec,
             }
             _set_stage(task_id, "整理输出文件", 90)
             _assert_not_canceled(task_id)
@@ -751,6 +949,14 @@ def _execute_task(task_id: str) -> None:
             }
             if image_path:
                 result["input_image"] = image_path
+                display_input_image = _build_displayable_input_image(image_path, f"chat_{task_id}")
+                if display_input_image:
+                    result["input_image_display"] = display_input_image
+
+                detected_geojson_path = _first_existing_geojson_path_from_text(answer_text)
+                overlay_spec = _build_input_overlay_spec(image_path, display_input_image, detected_geojson_path)
+                if overlay_spec:
+                    result["input_overlay"] = overlay_spec
 
             mark_stage("抽取结果文件", 86)
             _assert_not_canceled(task_id)
@@ -962,12 +1168,21 @@ async def api_chat(
     image_path: Optional[str] = Form(default=None),
     image_file: Optional[UploadFile] = File(default=None),
 ) -> JSONResponse:
+    global PENDING_CHAT_IMAGE
+
     resolved_image_path: Optional[str] = None
     source_name: Optional[str] = image_file.filename if (image_file is not None and image_file.filename) else None
     if (image_file is not None and image_file.filename) or (image_path and image_path.strip()):
         resolved_image_path = await _resolve_image_input(image_path, image_file, "chat")
         if source_name is None and resolved_image_path:
             source_name = Path(resolved_image_path).name
+    elif PENDING_CHAT_IMAGE:
+        remembered_path = str(PENDING_CHAT_IMAGE.get("image_path") or "").strip()
+        remembered_name = str(PENDING_CHAT_IMAGE.get("source_name") or "").strip()
+        if remembered_path:
+            resolved_image_path = remembered_path
+            if source_name is None and remembered_name:
+                source_name = remembered_name
 
     chat_text = (message or "").strip()
     if not chat_text and not resolved_image_path:
@@ -975,6 +1190,10 @@ async def api_chat(
 
     if resolved_image_path and not chat_text:
         display_name = source_name or (Path(resolved_image_path).name if resolved_image_path else "图片")
+        PENDING_CHAT_IMAGE = {
+            "image_path": resolved_image_path,
+            "source_name": display_name,
+        }
         return JSONResponse(
             {
                 "ok": True,
@@ -986,6 +1205,8 @@ async def api_chat(
                     "或者直接说明你希望我对这张图做什么。"
                 ),
                 "task": None,
+                "pending_image_path": resolved_image_path,
+                "pending_image_name": display_name,
             }
         )
 
@@ -1006,6 +1227,8 @@ async def api_chat(
             "source_name": source_name,
         },
     )
+    if resolved_image_path:
+        PENDING_CHAT_IMAGE = None
     return JSONResponse(
         {
             "ok": True,

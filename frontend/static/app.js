@@ -30,6 +30,7 @@ let confirmDialogLastActiveEl = null;
 const CHAT_STORAGE_KEY = 'mixsimgpt.chat.messages';
 const CHAT_PENDING_TASK_KEY = 'mixsimgpt.chat.pendingTask';
 const CHAT_SERVER_SESSION_KEY = 'mixsimgpt.chat.serverSession';
+const CHAT_PENDING_IMAGE_KEY = 'mixsimgpt.chat.pendingImage';
 const MAX_CHAT_HISTORY = 100;
 const MAX_UPLOAD_SIZE = 10 * 1024 * 1024;
 const ALLOWED_UPLOAD_EXTS = new Set(['.png', '.jpg', '.jpeg', '.bmp', '.webp', '.tif', '.tiff']);
@@ -160,12 +161,15 @@ function bindUploadStatusHints() {
 
 const map = L.map('networkMap', {
   zoomControl: true,
+  zoomSnap: 0.1,
+  zoomDelta: 0.25,
 }).setView([39.9042, 116.4074], 11);
 
 const mapBaseSourceEl = document.getElementById('mapBaseSource');
 const toggleBaseModeBtn = document.getElementById('toggleBaseModeBtn');
 
 let baseMapMode = 'vector'; // 'vector' | 'imagery'
+const IMAGE_MODE_RENDER_SCALE = 1000;
 
 function setBaseSourceText(text) {
   if (!mapBaseSourceEl) {
@@ -350,6 +354,7 @@ const TILE_SOURCES = [
 
 let baseTileLayer = null;
 let baseTileSourceIndex = -1;
+let imageCoordCanvasMode = false;
 
 function activeTileSourceIndices() {
   const indices = [];
@@ -453,6 +458,47 @@ function setBaseTileLayer(nextIndex, reason = '') {
   }
 }
 
+function removeBaseTileLayer() {
+  if (!baseTileLayer) {
+    return;
+  }
+  map.removeLayer(baseTileLayer);
+  layerOffRecursive(baseTileLayer);
+  baseTileLayer = null;
+}
+
+function setImageCoordCanvasMode(enabled) {
+  const container = map.getContainer();
+  if (container) {
+    container.classList.toggle('image-coordinate-mode', Boolean(enabled));
+  }
+
+  if (enabled) {
+    imageCoordCanvasMode = true;
+    removeBaseTileLayer();
+    setBaseSourceText('底图：非地理坐标画布');
+    return;
+  }
+
+  if (!imageCoordCanvasMode) {
+    return;
+  }
+  imageCoordCanvasMode = false;
+  const indices = activeTileSourceIndices();
+  const restoreIndex = indices.includes(baseTileSourceIndex) ? baseTileSourceIndex : (indices[0] ?? -1);
+  if (restoreIndex >= 0) {
+    setBaseTileLayer(restoreIndex, 'restore from image coordinate canvas mode');
+  }
+}
+
+function syncMapBaseWithCoordinateMode(coordMode) {
+  if (coordMode === 'image') {
+    setImageCoordCanvasMode(true);
+    return;
+  }
+  setImageCoordCanvasMode(false);
+}
+
 const TILE_ERROR_WINDOW_MS = 12_000;
 const TILE_ERROR_THRESHOLD = 8;
 let tileErrorTimestamps = [];
@@ -463,6 +509,10 @@ setBaseTileLayer(0);
 setBaseModeUi();
 if (toggleBaseModeBtn) {
   toggleBaseModeBtn.addEventListener('click', () => {
+    if (imageCoordCanvasMode) {
+      appendResult('底图切换提示', '当前是非地理坐标画布模式，请先加载地理坐标任务再切换底图。');
+      return;
+    }
     baseMapMode = baseMapMode === 'imagery' ? 'vector' : 'imagery';
     setBaseModeUi();
     const indices = activeTileSourceIndices();
@@ -476,6 +526,7 @@ const mapLayers = {
   nodes: L.layerGroup().addTo(map),
   links: L.layerGroup().addTo(map),
 };
+let inputOverlayLayer = null;
 
 function scheduleMapResize() {
   window.requestAnimationFrame(() => {
@@ -609,6 +660,7 @@ function clearStoredChatState() {
   try {
     window.localStorage.removeItem(CHAT_STORAGE_KEY);
     window.localStorage.removeItem(CHAT_PENDING_TASK_KEY);
+    window.localStorage.removeItem(CHAT_PENDING_IMAGE_KEY);
   } catch (_err) {
     // Ignore storage failures.
   }
@@ -617,6 +669,41 @@ function clearStoredChatState() {
     chatMessages.innerHTML = '';
     chatMessages.appendChild(createChatMessageElement('assistant', '你好，我可以帮你生成路网、抓取 OSM 或识别上传图片。'));
     persistChatMessages();
+  }
+}
+
+function setPendingChatImage(imagePath, imageName = '') {
+  try {
+    if (!imagePath) {
+      window.localStorage.removeItem(CHAT_PENDING_IMAGE_KEY);
+      return;
+    }
+    window.localStorage.setItem(CHAT_PENDING_IMAGE_KEY, JSON.stringify({
+      imagePath: String(imagePath),
+      imageName: String(imageName || ''),
+      updatedAt: Date.now(),
+    }));
+  } catch (_err) {
+    // Ignore storage failures.
+  }
+}
+
+function getPendingChatImage() {
+  try {
+    const raw = window.localStorage.getItem(CHAT_PENDING_IMAGE_KEY);
+    if (!raw) {
+      return null;
+    }
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed.imagePath !== 'string' || !parsed.imagePath.trim()) {
+      return null;
+    }
+    return {
+      imagePath: parsed.imagePath,
+      imageName: typeof parsed.imageName === 'string' ? parsed.imageName : '',
+    };
+  } catch (_err) {
+    return null;
   }
 }
 
@@ -670,8 +757,115 @@ function setCancelButtonEnabled(enabled) {
 }
 
 function clearMapNetwork() {
+  if (inputOverlayLayer) {
+    map.removeLayer(inputOverlayLayer);
+    inputOverlayLayer = null;
+  }
   mapLayers.nodes.clearLayers();
   mapLayers.links.clearLayers();
+}
+
+function findInputImageArtifact(artifacts, preferredPath = '') {
+  const normalizedPath = String(preferredPath || '').trim();
+  if (normalizedPath) {
+    const exact = (artifacts || []).find((item) => String(item && item.path || '') === normalizedPath);
+    if (exact && exact.is_image && exact.view_url) {
+      return exact;
+    }
+  }
+
+  const inputLike = (artifacts || []).find((item) => classifyArtifact(item) === 'input' && item.is_image && item.view_url);
+  if (inputLike) {
+    return inputLike;
+  }
+
+  const imageLike = (artifacts || []).find((item) => item && item.is_image && item.view_url);
+  return imageLike || null;
+}
+
+function normalizeOverlayBounds(rawBounds, coordMode) {
+  if (!Array.isArray(rawBounds) || rawBounds.length < 2) {
+    return null;
+  }
+  const a = rawBounds[0];
+  const b = rawBounds[1];
+  if (!Array.isArray(a) || !Array.isArray(b) || a.length < 2 || b.length < 2) {
+    return null;
+  }
+
+  const p1 = applyBaseCrsTransform([asNumber(a[0]), asNumber(a[1])], coordMode);
+  const p2 = applyBaseCrsTransform([asNumber(b[0]), asNumber(b[1])], coordMode);
+  if (!p1 || !p2 || !Number.isFinite(p1[0]) || !Number.isFinite(p1[1]) || !Number.isFinite(p2[0]) || !Number.isFinite(p2[1])) {
+    return null;
+  }
+
+  let south = Math.min(p1[0], p2[0]);
+  let north = Math.max(p1[0], p2[0]);
+  let west = Math.min(p1[1], p2[1]);
+  let east = Math.max(p1[1], p2[1]);
+
+  if (coordMode === 'image') {
+    south *= IMAGE_MODE_RENDER_SCALE;
+    north *= IMAGE_MODE_RENDER_SCALE;
+    west *= IMAGE_MODE_RENDER_SCALE;
+    east *= IMAGE_MODE_RENDER_SCALE;
+  }
+  if (!(Number.isFinite(south) && Number.isFinite(north) && Number.isFinite(west) && Number.isFinite(east))) {
+    return null;
+  }
+  return [[south, west], [north, east]];
+}
+
+function bringNetworkLayersToFront() {
+  mapLayers.nodes.eachLayer((layer) => {
+    if (layer && typeof layer.bringToFront === 'function') {
+      layer.bringToFront();
+    }
+  });
+  mapLayers.links.eachLayer((layer) => {
+    if (layer && typeof layer.bringToFront === 'function') {
+      layer.bringToFront();
+    }
+  });
+}
+
+function renderInputOverlay(artifacts, taskResult, coordMode, fallbackBounds) {
+  if (inputOverlayLayer) {
+    map.removeLayer(inputOverlayLayer);
+    inputOverlayLayer = null;
+  }
+
+  const overlay = taskResult && taskResult.input_overlay ? taskResult.input_overlay : null;
+  const artifact = findInputImageArtifact(artifacts, overlay && overlay.image_path ? overlay.image_path : '');
+  if (!artifact || !artifact.view_url) {
+    return false;
+  }
+
+  let bounds = normalizeOverlayBounds(overlay && overlay.bounds ? overlay.bounds : null, coordMode);
+  if (!bounds && Array.isArray(fallbackBounds) && fallbackBounds.length >= 2) {
+    const latLngBounds = L.latLngBounds(fallbackBounds);
+    if (latLngBounds.isValid()) {
+      const sw = latLngBounds.getSouthWest();
+      const ne = latLngBounds.getNorthEast();
+      bounds = [[sw.lat, sw.lng], [ne.lat, ne.lng]];
+    }
+  }
+
+  if (!bounds) {
+    return false;
+  }
+
+  inputOverlayLayer = L.imageOverlay(artifact.view_url, bounds, {
+    opacity: 0.65,
+    interactive: false,
+    zIndex: 200,
+  }).addTo(map);
+
+  if (typeof inputOverlayLayer.bringToBack === 'function') {
+    inputOverlayLayer.bringToBack();
+  }
+  bringNetworkLayersToFront();
+  return true;
 }
 
 function invalidateMapRender() {
@@ -827,7 +1021,7 @@ function orientPoint(pt, mode) {
   }
   if (mode === 'image') {
     // Keep same visual orientation as preview image (image y grows downward).
-    return [-pt[0], pt[1]];
+    return [-pt[0] * IMAGE_MODE_RENDER_SCALE, pt[1] * IMAGE_MODE_RENDER_SCALE];
   }
   return pt;
 }
@@ -999,7 +1193,7 @@ function drawGeoJsonGeometry(geometry, coordMode, bounds) {
   return { nodes: 0, links: 0 };
 }
 
-async function renderGeoJsonOnMap(geojsonArtifacts, renderVersion) {
+async function renderGeoJsonOnMap(geojsonArtifacts, renderVersion, artifacts, taskResult) {
   const geojsonDocs = [];
   for (const art of geojsonArtifacts) {
     // eslint-disable-next-line no-await-in-loop
@@ -1020,6 +1214,7 @@ async function renderGeoJsonOnMap(geojsonArtifacts, renderVersion) {
   geojsonDocs.forEach((doc) => collectGeoJsonSamplePoints(doc, rawSamplePoints));
   const coordMode = detectCoordinateMode(rawSamplePoints);
   setMapOrientationMode(coordMode);
+  syncMapBaseWithCoordinateMode(coordMode);
 
   const bounds = [];
   let drawnNodes = 0;
@@ -1042,16 +1237,20 @@ async function renderGeoJsonOnMap(geojsonArtifacts, renderVersion) {
     return true;
   }
 
+  const overlayShown = renderInputOverlay(artifacts, taskResult, coordMode, bounds);
+
   if (renderVersion !== mapRenderVersion) {
     return true;
   }
   scheduleMapResize();
   map.fitBounds(bounds, { padding: [20, 20] });
-  mapHintEl.textContent = `已从 GeoJSON 绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`;
+  mapHintEl.innerHTML = overlayShown
+    ? `已叠加输入图片<br>并从 GeoJSON 绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`
+    : `已从 GeoJSON 绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`;
   return true;
 }
 
-async function renderNetworkOnMap(artifacts) {
+async function renderNetworkOnMap(artifacts, taskResult = null) {
   const renderVersion = mapRenderVersion;
   clearMapNetwork();
   scheduleMapResize();
@@ -1064,7 +1263,7 @@ async function renderNetworkOnMap(artifacts) {
   });
 
   if (geojsonArtifacts.length > 0) {
-    const rendered = await renderGeoJsonOnMap(geojsonArtifacts, renderVersion);
+    const rendered = await renderGeoJsonOnMap(geojsonArtifacts, renderVersion, artifacts, taskResult);
     if (rendered) {
       return;
     }
@@ -1116,6 +1315,7 @@ async function renderNetworkOnMap(artifacts) {
     return;
   }
   setMapOrientationMode(coordMode);
+  syncMapBaseWithCoordinateMode(coordMode);
 
   const nodeCoordById = new Map();
   csvRows.forEach(({ rows }) => {
@@ -1213,13 +1413,18 @@ async function renderNetworkOnMap(artifacts) {
     return;
   }
 
+  const overlayShown = renderInputOverlay(artifacts, taskResult, coordMode, bounds);
+
   if (renderVersion !== mapRenderVersion) {
     return;
   }
   scheduleMapResize();
-  map.fitBounds(bounds, { padding: [20, 20] });
-  mapHintEl.textContent = `已绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`;
+  map.fitBounds(overlayShown ? overlayBounds : bounds, { padding: [20, 20] });
+  mapHintEl.textContent = overlayShown
+    ? `已叠加输入图片\n并绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`
+    : `已绘制节点 ${drawnNodes} 个，路段 ${drawnLinks} 条。`;
 }
+
 
 function renderProcess(data) {
   const lines = [];
@@ -1688,6 +1893,13 @@ function buildArtifactCard(item) {
   title.textContent = item.label || item.name || '产物文件';
   card.appendChild(title);
 
+  if (item.name) {
+    const fileName = document.createElement('p');
+    fileName.className = 'artifact-file-name';
+    fileName.textContent = item.name;
+    card.appendChild(fileName);
+  }
+
   if (item.is_image && item.view_url) {
     const img = document.createElement('img');
     img.src = item.view_url;
@@ -1946,7 +2158,7 @@ async function pollTaskFallback(taskId, isChatFlow) {
         const artifacts = (task.result && task.result.artifacts) || [];
         invalidateMapRender();
         renderArtifacts(artifacts);
-        renderNetworkOnMap(artifacts).catch(() => {
+        renderNetworkOnMap(artifacts, task.result || null).catch(() => {
           mapHintEl.textContent = '地图绘制失败，请检查结果文件格式。';
         });
         if (isChatFlow) {
@@ -2057,7 +2269,7 @@ function monitorTask(taskId, endpointLabel) {
       const artifacts = (data.result && data.result.artifacts) || [];
       invalidateMapRender();
       renderArtifacts(artifacts);
-      renderNetworkOnMap(artifacts).catch(() => {
+      renderNetworkOnMap(artifacts, data.result || null).catch(() => {
         mapHintEl.textContent = '地图绘制失败，请检查结果文件格式。';
       });
       if (isChatFlow) {
@@ -2140,7 +2352,7 @@ async function resumePendingChatTask() {
       const artifacts = (task.result && task.result.artifacts) || [];
       invalidateMapRender();
       renderArtifacts(artifacts);
-      renderNetworkOnMap(artifacts).catch(() => {
+      renderNetworkOnMap(artifacts, task.result || null).catch(() => {
         mapHintEl.textContent = '地图绘制失败，请检查结果文件格式。';
       });
       setBatchDownload(task.task_id, artifacts.length > 0);
@@ -2252,6 +2464,7 @@ if (chatForm) {
     event.preventDefault();
     const msg = (chatInput.value || '').trim();
     const hasFile = chatImage.files && chatImage.files.length > 0;
+    const pendingImage = getPendingChatImage();
     if (!msg && !hasFile) {
       appendChatMessage('assistant', '请输入文字或上传图片后再发送。');
       return;
@@ -2272,6 +2485,8 @@ if (chatForm) {
         return;
       }
       fd.append('image_file', chatImage.files[0]);
+    } else if (pendingImage && pendingImage.imagePath) {
+      fd.append('image_path', pendingImage.imagePath);
     }
 
     try {
@@ -2289,6 +2504,13 @@ if (chatForm) {
       if (hasFile) {
         rememberSentUpload(chatImage, chatImage.files[0]);
       }
+
+      if (data.pending_image_path) {
+        setPendingChatImage(data.pending_image_path, data.pending_image_name || '');
+      } else if (data.task && data.task.task_id) {
+        setPendingChatImage(null);
+      }
+
       chatInput.value = '';
       chatImage.value = '';
       chatImage.dispatchEvent(new Event('change'));
