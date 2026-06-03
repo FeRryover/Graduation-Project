@@ -1903,8 +1903,11 @@ function buildArtifactCard(item) {
   if (item.is_image && item.view_url) {
     const img = document.createElement('img');
     img.src = item.view_url;
-    img.alt = item.name || '预览图';
+    img.alt = '图片预览';
     img.className = 'artifact-preview';
+    img.addEventListener('error', () => {
+      img.classList.add('is-broken');
+    });
     card.appendChild(img);
   }
 

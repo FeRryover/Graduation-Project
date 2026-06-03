@@ -1,6 +1,7 @@
 import numpy as np
 import cv2, csv, math, operator
 import os
+import time
 
 # 中间过程的图片保存，不需要时前面加上return
 def temp_save(flag, name, image):
@@ -27,6 +28,12 @@ def mse(image1, image2):
 # min_mse越大，对急短线更严格，但更不容易出现重复连接
 # n_point 指的是对二次连接点 → 重要点的判断能力，以及删除重要点之间不重要点的精度。值越大，判断越严格，同时删除不重要点的能力越强。
 def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_point = 10, output_root='result'):
+    timing = {}
+
+    def mark(name, start_ts):
+        timing[name] = round(time.perf_counter() - start_ts, 4)
+
+    t0 = time.perf_counter()
     # 读取图片
     img = cv2.imread(img_name)
 
@@ -47,13 +54,16 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
             l = (point_1[0] - point_2[0]) ** 2 + (point_1[1] - point_2[1]) ** 2
             if l <= target:
                 temp_dict[(point_1, point_2)] = l
+    mark('build_pairs_round1', t0)
 
 
     # 2、按距离排序
+    t0 = time.perf_counter()
     # 使用sorted函数根据值对字典进行排序
     sorted_items = sorted(temp_dict.items(), key=operator.itemgetter(1))
     # 获取排序后的键（x, y）列表
     sorted_list = [item[0] for item in sorted_items]
+    mark('sort_pairs_round1', t0)
 
     # 检查需要创建的文件夹  (检查是否存在名为"result"的文件夹，如果不存在，则创建它)
     dir_name = [
@@ -65,8 +75,10 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
     for dir in dir_name:
         if not os.path.exists(dir):
             os.makedirs(dir)
+    mark('prepare_output_dirs', t0)
 
     # 3、按距离连线
+    t0 = time.perf_counter()
     connect = dict()  # connect是保存连接关系的字典。主要用于检测直线拐点。
     flag = 0  # temp计数器
     # 连接、分点、剔除不必要点，返回真正的corners
@@ -89,14 +101,17 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
         else:
             # 误差没有变得更小，所以移除连接线以继续遍历
             image_copy = image_temp.copy()
+    mark('connect_round1', t0)
 
     # 得到了每个点的连接次数point_score。分离所有连接次数2与非2的点
+    t0 = time.perf_counter()
     point_score_2, point_score_n = list(), list()
     for key in point_score:
         if point_score[key] == 2:
             point_score_2.append(key)
         else:
             point_score_n.append(key)
+    mark('split_key_points', t0)
 
     # 从连接次数2的点中提取直角拐弯的点，放入重要点集合中
     i = 0
@@ -108,6 +123,7 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
             point_score_2.remove(point_2)
             i -= 1
         i += 1
+    mark('refine_turning_points', t0)
 
     # 已经分离了所有重要点和非重要点。绘制角点，调试
     temp_draw(image_copy.copy(), point_score_n, point_score_2, os.path.join(output_root, 'jdjc_color_result.jpg'))
@@ -131,6 +147,7 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
                 point_score_2.pop(i)
                 i -= 1
             i += 1
+    mark('prune_non_critical_points', t0)
 
     # 已经删除了所有不重要点。绘制角点，调试
     temp_draw(image_copy.copy(), point_score_n, point_score_2, os.path.join(output_root, 'jdjc_best_result.jpg'))
@@ -139,6 +156,7 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
     coord_scale = 1e-6
 
     # 创建corners.csv 并写入数据
+    t0 = time.perf_counter()
     csv_file_path = os.path.join(dir_name[1], 'corners.csv')
     with open(csv_file_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
@@ -146,6 +164,7 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
         for i in range(len(corners)):
             x, y = corners[i]
             csvwriter.writerow([i, f"{x * coord_scale:.6f}", f"{y * coord_scale:.6f}"])
+    mark('write_corners_csv', t0)
 
     # 接下来开始清洗后的画图，并保存数据。
     best_image = None
@@ -153,6 +172,7 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
     best_mse = mse(img, image_copy)  # 求出白纸的初始best_mse
 
     # 1、计算所有两点间距离。target值表示阈值, 超过这个距离的点将不会被连接
+    t0 = time.perf_counter()
     temp_dict = dict()
     for i in range(len(corners)):
         for j in range(i + 1, len(corners)):
@@ -161,16 +181,20 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
             l = (point_1[0] - point_2[0]) ** 2 + (point_1[1] - point_2[1]) ** 2
             if l <= target:
                 temp_dict[(point_1, point_2)] = l
+    mark('build_pairs_round2', t0)
 
 
     # 2、按距离排序
+    t0 = time.perf_counter()
     # 使用sorted函数根据值对字典进行排序
     sorted_items = sorted(temp_dict.items(), key=operator.itemgetter(1))
     # 获取排序后的键（x, y）列表
     sorted_list = [item[0] for item in sorted_items]
+    mark('sort_pairs_round2', t0)
 
 
     # 3、按距离连线。创建link.csv 并写入数据
+    t0 = time.perf_counter()
     csv_file_path = os.path.join(dir_name[1], 'link.csv')
     with open(csv_file_path, 'w', newline='') as csvfile:
         csvwriter = csv.writer(csvfile)
@@ -201,8 +225,14 @@ def draw(corners, img_name, best_image_name, min_mse = 40, target = 62500, n_poi
             else:
                 # 移除连接线以继续遍历
                 image_copy = image_temp.copy()
+    mark('connect_round2_and_write_link_csv', t0)
+
     # 保存最佳图像
+    t0 = time.perf_counter()
     cv2.imwrite(best_image_name, best_image)
+    mark('write_best_image', t0)
+
+    return timing
 
 
 # 记录每个点的连接次数，同时给两个点互相添加相连关系：

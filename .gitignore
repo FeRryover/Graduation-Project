@@ -23,5 +23,36 @@
 #!important.log  # 不忽略 important.log
 
 
-/Database/
 resources/best_model.pth
+
+# Python相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+#项目模型，由于>100mb所以不上传
+resources/best_model.pth
+
+# 项目特定临时文件
+frontend/download_cache/    #程序运行时的下载缓存
+frontend/uploads/         #用户上传的临时文件
+result/                     #程序运行生成的结果文件
+*.GeoJson
+*.geojson

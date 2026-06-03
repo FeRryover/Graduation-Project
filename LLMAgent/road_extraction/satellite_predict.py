@@ -16,17 +16,42 @@ import numpy as np
 import segmentation_models_pytorch as smp
 import torch
 import zipfile
+import time
 
 warnings.filterwarnings("ignore")
 
+_MODEL_CACHE = {}
 
-def predict_road_from_satellite_image(pic_path):
+
+def _get_cached_model(model_path, device):
+    cache_key = (os.path.abspath(model_path), str(device))
+    if cache_key in _MODEL_CACHE:
+        return _MODEL_CACHE[cache_key]
+
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(f"未找到模型: {model_path}")
+
+    model = torch.load(model_path, map_location=device)
+    model.eval()
+    _MODEL_CACHE[cache_key] = model
+    return model
+
+
+def predict_road_from_satellite_image(pic_path, debug_visualization=False):
+    total_start = time.perf_counter()
+    stage_cost = {}
+
+    def mark(stage_name, start_ts):
+        stage_cost[stage_name] = round(time.perf_counter() - start_ts, 4)
+
+    t0 = time.perf_counter()
     current_time = datetime.now()
     folder_name = current_time.strftime("%Y-%m-%d_%H-%M-%S")
     work_dir = os.path.dirname(pic_path)  # 获取图片所在目录
     work_folder = os.path.join(work_dir, folder_name)  # 创建work文件夹的路径
     os.makedirs(work_folder, exist_ok=True)
     shutil.copy(pic_path, os.path.join(work_folder, os.path.basename(pic_path)))
+    mark("prepare_workspace", t0)
 
     # 定义各种参数
     # 自动选择设备：优先使用 CUDA，不可用时回退到 CPU。
@@ -239,13 +264,13 @@ def predict_road_from_satellite_image(pic_path):
             # 返回长度
             return len(self.image_paths)
 
-    if os.path.exists(model_path):
-        best_model = torch.load(model_path, map_location=DEVICE)
-        print("成功加载模型")
-    else:
-        print("未找到模型")
+    t0 = time.perf_counter()
+    best_model = _get_cached_model(model_path, DEVICE)
+    print("模型已就绪")
+    mark("load_or_reuse_model", t0)
 
     # 创建用于测试的数据加载器 (with preprocessing operation: to_tensor(...))
+    t0 = time.perf_counter()
     test_dataset = RoadsDataset(
         x_test_dir,
         y_test_dir,
@@ -255,23 +280,28 @@ def predict_road_from_satellite_image(pic_path):
         class_rgb_values=select_class_rgb_values,
     )
 
-    # 创建可视化测试数据集 (without preprocessing transformations)
-    test_dataset_vis = RoadsDataset(
-        x_test_dir,
-        y_test_dir,
-        augmentation=get_validation_augmentation(),
-        class_rgb_values=select_class_rgb_values,
-    )
+    # 仅在调试模式下创建可视化数据集，避免重复读图和预处理开销
+    test_dataset_vis = None
+    if debug_visualization:
+        test_dataset_vis = RoadsDataset(
+            x_test_dir,
+            y_test_dir,
+            augmentation=get_validation_augmentation(),
+            class_rgb_values=select_class_rgb_values,
+        )
+    mark("build_dataset", t0)
 
-
-
+    t0 = time.perf_counter()
     for idx in range(len(test_dataset)):
         image, gt_mask = test_dataset[idx]
-        image_vis = crop_image(test_dataset_vis[idx][0].astype("uint8"))  # 也是roads_dataset类
+        image_vis = None
+        if debug_visualization and test_dataset_vis is not None:
+            image_vis = crop_image(test_dataset_vis[idx][0].astype("uint8"))
         x_tensor = torch.from_numpy(image).to(DEVICE).unsqueeze(0)
 
         # 预测测试图
-        pred_mask = best_model(x_tensor)
+        with torch.inference_mode():
+            pred_mask = best_model(x_tensor)
         pred_mask = pred_mask.detach().squeeze().cpu().numpy()
 
         # 将预测出来的pred_mask从'CHW'转换为'HWC'格式
@@ -297,18 +327,21 @@ def predict_road_from_satellite_image(pic_path):
             colour_code_segmentation(reverse_one_hot(gt_mask), select_class_rgb_values)
         )
 
-        visualize(
-            original_image=image_vis,
-            ground_truth_mask=gt_mask,
-            predicted_mask=pred_mask,
-            # predicted_road_heatmap = pred_road_heatmap
-        )
+        if debug_visualization and image_vis is not None:
+            visualize(
+                original_image=image_vis,
+                ground_truth_mask=gt_mask,
+                predicted_mask=pred_mask,
+                # predicted_road_heatmap = pred_road_heatmap
+            )
+    mark("model_inference", t0)
 
     print("生成的二值图路径:", save_path_1)
     print("开始识别角点...")
 
     # 接下来使用inverted_image进行后续操作：识别角点，生成gmns文件
 
+    t0 = time.perf_counter()
     # 得到 inverted_image 的灰度图 gray_image（2D NumPy数组）
     gray_image = cv2.cvtColor(inverted_image, cv2.COLOR_BGR2GRAY)
 
@@ -337,34 +370,48 @@ def predict_road_from_satellite_image(pic_path):
     # 2、边缘检测得到二值图, temp_save_name是边缘检测结果，更适合作为误差判断参考
     # 经过测试，应该加上这一步
     gray_image_byjc = byjc(gray_image, temp_save_name)
+    mark("preprocess_post_seg", t0)
 
     # 3、角点检测得到角点corners.csv文件, 返回优化好的数组
+    t0 = time.perf_counter()
     best_xy_list = jdjc(gray_image_byjc, img_save_name, line_width
                         , maxCorners, qualityLevel, minDistance, blockSize, useHarrisDetector, k)
+    mark("corner_detection", t0)
 
     print("角点识别完成，并已保存识别结果图，开始遍历角点并连线...")
 
     # 4、画图，并生成link.csv文件
     # min_mse 指允许画线的最小误差阈值，意在防止重复连线。越大，对短线更严格，但更不容易出现重复连接
     # target 指线允许连接的距离的平方。越大允许连接的线越远，但同时计算速度越慢。当出现有断线时，可尝试增大该值。
-    draw(best_xy_list, temp_save_name, best_img_name, min_mse=40, target=62500, output_root=output_root)
+    t0 = time.perf_counter()
+    draw_timing = draw(best_xy_list, temp_save_name, best_img_name, min_mse=40, target=62500, output_root=output_root)
+    mark("draw_links", t0)
 
+    t0 = time.perf_counter()
     geojson_path = os.path.join(output_root, 'road_network.geojson')
     write_network_geojson(
         geojson_path,
         os.path.join(output_root, 'gmns', 'corners.csv'),
         os.path.join(output_root, 'gmns', 'link.csv'),
     )
+    mark("write_geojson", t0)
 
     print("已完成角点间连线识别，并已生成gmns文件")
 
     # 5、将生成的gmns文件夹压缩为zip文件
+    t0 = time.perf_counter()
     zip_file_path = os.path.join(output_root, 'gmns.zip')
     with zipfile.ZipFile(zip_file_path, 'w') as zipf:
         # 添加 corners.csv
         zipf.write(os.path.join(output_root, 'gmns', 'corners.csv'), 'gmns/corners.csv')
         # 添加 link.csv
         zipf.write(os.path.join(output_root, 'gmns', 'link.csv'), 'gmns/link.csv')
+    mark("zip_outputs", t0)
+
+    total_cost = round(time.perf_counter() - total_start, 4)
+    print("[satellite_timing]", stage_cost, "total", total_cost, "s")
+    if draw_timing is not None:
+        print("[draw_timing]", draw_timing)
 
     # 返回生成的gmns文件夹压缩包路径
     return zip_file_path, best_img_name, geojson_path

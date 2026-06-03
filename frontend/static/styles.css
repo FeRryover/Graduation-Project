@@ -834,7 +834,7 @@ button:disabled {
   line-height: 1.4;
   white-space: normal;
   overflow-wrap: anywhere;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .artifact-preview {
@@ -844,6 +844,10 @@ button:disabled {
   border: 1px solid var(--line-soft);
   border-radius: 8px;
   background: #f8fbf6;
+}
+
+.artifact-preview.is-broken {
+  display: none;
 }
 
 .artifact-actions {
